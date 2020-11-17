@@ -1,6 +1,6 @@
 # Probabilistic Deep-Learning with TensorFlow 
 
-<img src='head.png'>
+<img src='https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/blob/main/Tensorflow_Dev_png/head.png'>
 
 ## **Why is probabilistic programming important for deep learning?**
 
@@ -37,3 +37,26 @@ coeffs, linear_response, is_converged, num_iter = tfp.glm.fit(
 - Optimizers such as Nelder-Mead, BFGS, and SGLD
 
 [![Watch the video](https://img.youtube.com/vi/BrwKURU-wpk/maxresdefault.jpg)](https://youtu.be/BrwKURU-wpk)
+
+
+
+
+### Connect with me:
+
+
+[<img align="left" alt="codeSTACKr | Twitter" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" />][twitter]
+[<img align="left" alt="codeSTACKr | LinkedIn" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />][linkedin]
+[<img align="left" alt="codeSTACKr.com" width="22px" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg" />][StackExchange AI]
+
+[twitter]: https://twitter.com/F4izy
+[linkedin]: https://www.linkedin.com/in/faizy-mohd-836573122/
+[StackExchange AI]: https://ai.stackexchange.com/users/36737/cypher
+
+
+---
+
+
+![Faizy's github stats](https://github-readme-stats.vercel.app/api?username=mohd-faizy&show_icons=true)
+
+
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=mohd-faizy&layout=compact)](https://github.com/mohd-faizy/github-readme-stats)
