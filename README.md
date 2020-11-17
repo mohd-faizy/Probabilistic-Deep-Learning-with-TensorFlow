@@ -1,6 +1,8 @@
-# Probabilistic Deep-Learning with TensorFlow 
+# **Probabilistic Deep Learning with TensorFlow**
 
 <img src='https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/blob/main/Tensorflow_Dev_png/head.png'>
+
+> **Documentation**: [tfp_api_docs](https://www.tensorflow.org/probability/api_docs/python/tfp)
 
 ## **Why is probabilistic programming important for deep learning?**
 
@@ -12,7 +14,7 @@
 
 ```python
 import tensorflow as tf
-import tensorflow_probability as tfp
+import tensorflow_probability as tfp # tfp is a seprate library itself
 
 # Pretend to load synthetic data set.
 features = tfp.distributions.Normal(loc=0., scale=1.).sample(int(100e3))
@@ -38,7 +40,30 @@ coeffs, linear_response, is_converged, num_iter = tfp.glm.fit(
 
 [![Watch the video](https://img.youtube.com/vi/BrwKURU-wpk/maxresdefault.jpg)](https://youtu.be/BrwKURU-wpk)
 
+> The TensorFlow Probability library provides a powerful set of tools, for statistical modeling, and makes it easy to extend our use of TensorFlow to probabilistic deep learning models. The TFP library, is part of the wider TensorFlow ecosystem, which contains a number of libraries and extensions for advanced and specialized use cases.
 
+---
+
+# :zero::one: **The TensorFlow Probability library**
+---
+
+## :black_circle: **a) Univariate distributions**
+
+**Distribution objects** are vital building blocks to build probabilistic deep learning models as these objects capture the essential operations on probability distributions that we're going to need as we build these models.
+
+## :black_circle: **b) Multivariate distributions**
+
+## :black_circle: **c) The Independent distribution**
+
+## :black_circle: **d) Sampling and log probs**
+
+## :black_circle: **e) Trainable distributions**
+
+---
+
+# :zero::two: **Probabilistic layers and Bayesian neural networks**
+
+---
 
 
 ### Connect with me:
