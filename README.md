@@ -42,9 +42,9 @@ coeffs, linear_response, is_converged, num_iter = tfp.glm.fit(
 
 > The TensorFlow Probability library provides a powerful set of tools, for statistical modeling, and makes it easy to extend our use of TensorFlow to probabilistic deep learning models. The TFP library, is part of the wider TensorFlow ecosystem, which contains a number of libraries and extensions for advanced and specialized use cases.
 
-## Main Distributions
+## Here are the main Distributions to have in mind
 
-### a) Binomial Distribution:
+### a) [Binomial Distribution:](https://en.wikipedia.org/wiki/Binomial_distribution)
 
 **What is a Binomial Distribution?**
 
@@ -78,7 +78,7 @@ for `k = 0, 1, 2, ..., n,` where
 
 is the binomial coefficient, hence the name of the distribution. The formula can be understood as follows: k successes occur with probability <a href="https://www.codecogs.com/eqnedit.php?latex=p^k" target="_blank"><img src="https://latex.codecogs.com/gif.latex?p^k" title="p^k" /></a> and `n − k` failures occur with probability `(1 − p)^(n − k)`.
 
-### b) Poisson Distribution:
+### b) [Poisson Distribution:](https://en.wikipedia.org/wiki/Poisson_distribution)
 
 Poisson distribution is a statistical distribution that shows how many times an event is likely to occur within a specified period of time. It is used for independent events which occur at a constant rate within a given interval of time.
 
@@ -91,6 +91,7 @@ The probability that an event occurs in a given time, distance, area, or volume 
 The Poisson distribution is popular for modeling the number of times an event occurs in an interval of time or space.
 
 A discrete random variable `X` is said to have a Poisson distribution with parameter `λ > 0` if for `k = 0, 1, 2, ...,` the probability mass function of X is given by
+
 <img src='https://wikimedia.org/api/rest_v1/media/math/render/svg/c22cb4461e100a6db5f815de1f44b1747f160048'>
 
 where
@@ -105,7 +106,7 @@ The positive real number `λ` is equal to the expected value of `X` and also to 
 
 The Poisson distribution can be applied to systems with a large number of possible events, each of which is rare. The number of such events that occur during a fixed time interval is, under the right circumstances, a random number with a Poisson distribution.
 
-### c) Uniform Distribution:
+### c) [Uniform Distribution:](https://en.wikipedia.org/wiki/Continuous_uniform_distribution)
 
 The distribution in which all outcomes are equally likely. for example: A coin also has a uniform distribution because the probability of getting either heads or tails in a coin toss is the same.
 
@@ -117,9 +118,44 @@ The distribution in which all outcomes are equally likely. for example: A coin a
 
 <img src='https://wikimedia.org/api/rest_v1/media/math/render/svg/e5c664c7665277eea8f74575f4650fa933f28dcb'>
 
-#### Other Resources
+### d) [Gaussian Distribution:](https://en.wikipedia.org/wiki/Normal_distribution)
 
-- YouTube [StatQuest](https://www.youtube.com/channel/UCtYLUTtgS3k1Fg4y5tAhLbw)
+The **Gaussian Distribution**, is a probability distribution that is **Symmetric** about the mean, showing that data near the mean are more frequent in occurrence than data far from the mean. In graph form, normal distribution will appear as a **bell curve**.
+
+> Normal distributions are important in statistics and are often used in the natural and social sciences to represent real-valued random variables whose distributions are not known.
+
+<img src='https://www.gstatic.com/education/formulas/images_long_sheet/en/normal_distribution.svg'>
+
+_where_
+
+<img src='https://www.gstatic.com/education/formulas/images_long_sheet/en/normal_distribution_normal_distribution_var_1.svg'> = Probability density function
+
+<img src='https://www.gstatic.com/education/formulas/images_long_sheet/en/normal_distribution_normal_distribution_var_2.svg'> = Standard deviation
+
+<img src='https://www.gstatic.com/education/formulas/images_long_sheet/en/normal_distribution_normal_distribution_var_3.svg'> = Mean
+
+Their **Importance** is partly due to the **Central Limit Theorem**. It states that, under some conditions, the average of many samples (observations) of a random variable with finite mean and variance is itself a random variable—whose distribution converges to a normal distribution as the number of samples increases.
+
+### e) [Exponential Distribution:](https://towardsdatascience.com/what-is-exponential-distribution-7bdd08590e2a)
+
+#### Why did we have to invent Exponential Distribution?
+
+To predict the amount of waiting time until the next event (i.e., success, failure, arrival, etc.).
+
+**\_For example, we want to predict the following:**
+
+- The amount of time until the customer finishes browsing and actually purchases something in your store (success).
+- The amount of time until the hardware on AWS EC2 fails (failure).
+- The amount of time you need to wait until the bus arrives (arrival).
+
+<img src='https://www.gstatic.com/education/formulas/images_long_sheet/en/exponential_distribution.svg'>
+
+_where:_
+
+- <img src='https://www.gstatic.com/education/formulas/images_long_sheet/en/exponential_distribution_exponential_distribution_var_1.svg'> = Probability Density Function
+
+- `λ` = Rate parameter
+- `x` = Random variable
 
 ---
 
@@ -142,6 +178,12 @@ The distribution in which all outcomes are equally likely. for example: A coin a
 ---
 
 # :zero::two: **Probabilistic layers and Bayesian neural networks**
+
+## Other Resources
+
+- YouTube [StatQuest](https://www.youtube.com/channel/UCtYLUTtgS3k1Fg4y5tAhLbw)
+- [Probability Cheatsheet A](https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/blob/main/01_Probability_Cheatsheet_a.pdf)
+- [Probability Cheatsheet B](https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/blob/main/02_Probability_Cheatsheet_b.pdf)
 
 ---
 
