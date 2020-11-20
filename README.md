@@ -44,8 +44,9 @@ coeffs, linear_response, is_converged, num_iter = tfp.glm.fit(
 - Variational inference and Markov chain Monte Carlo.
 - Optimizers such as Nelder-Mead, BFGS, and SGLD
 
-
-<a href="https://youtu.be/BrwKURU-wpk" target="_blank"><img src="https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/blob/main/Tensorflow_Dev_png/tfp_dev_summit_ytd.jpg" height='500' width='1000'></a>
+<p align='center'>
+    <a href="https://youtu.be/BrwKURU-wpk" target="_blank"><img src="https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/blob/main/Tensorflow_Dev_png/tfp_dev_summit_ytd.jpg" height='350' width='600'></a>
+</p>
 
 > The TensorFlow Probability library provides a powerful set of tools, for statistical modeling, and makes it easy to extend our use of TensorFlow to probabilistic deep learning models. The TFP library, is part of the wider TensorFlow ecosystem, which contains a number of libraries and extensions for advanced and specialized use cases.
 
