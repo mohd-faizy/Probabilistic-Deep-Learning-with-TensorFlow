@@ -453,7 +453,7 @@ batched_bernoulli.log_prob([1, 1])
 <tf.Tensor: shape=(2,), dtype=float32, numpy=array([-0.9162907, -0.6931472], dtype=float32)>
 ```
 
-#### :triangular*flag_on_post: **Que:** \_What is the shape of the Tensor that is returned from the following call to the sample method*:question:
+### :triangular_flag_on_post: **Que:** What is the shape of the Tensor that is returned from the following call to the sample method :question:
 
 ```python
 import tensorflow_probability as tfp
