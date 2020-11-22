@@ -173,16 +173,17 @@ _where:_
 
 ## :black_circle: **a) Univariate distributions**
 
-> Distributions of a single random variable
+> Distributions with a single random variable
 
-**Distribution objects** are vital building blocks to build probabilistic deep learning models as these objects capture the essential operations on probability distributions that we're going to need as we build these models.
+**Distribution objects** are vital building blocks to build **Probabilistic deep learning Models** as these objects capture the essential operations on probability distributions that we're going to need to build these models.
+
+### :heavy_check_mark: **Defining our first univariate distribution object**
 
 ```python
 import tensorflow as tf
 import tensorflow_probability as tfp
 tfd = tfp.distributions    # Shortcut to the distributions
 
-# Defining our first univariate distribution object
 '''
 Standard normal distribution with 0 mean and standard
 deviation equal to 1
@@ -199,7 +200,7 @@ tfp.distributions.Normal("Normal", batch_shape=[], event_shape=[], dtype=float32
 - `loc` and `scale` : These two **keyword arguments** are required when you instantiate a normal distribution.
 - `event_shape=[]` is what captures the dimensionality of the **random variable** itself. Since this distribution is of a single random variable, the event shape is empty, just in the same way that a scalar tensor has an empty shape.
 
-### **`Sampling()` from the distribution:**
+### :heavy_check_mark: **`Sampling()` from the distribution:**
 
 ```python
 import tensorflow as tf
@@ -236,7 +237,7 @@ normal.sample(3) # We can also draw multiple independent samples from the distri
 
 Now it returns a tensor of length three with samples from the standard normal distribution.
 
-### `prob()` **Method**
+### :heavy_check_mark: `prob()` **Method**
 
 This funtion evaluates the **Probability Density Function** at the given input.
 
@@ -254,7 +255,7 @@ normal.prob(0.5) # Evaluating a standard normal PDF at the point 0.5
 <tf.Tensor: shape=(), dtype=float32, numpy=0.35206532>
 ```
 
-### `log_prob()` **Method**
+### :heavy_check_mark: `log_prob()` **Method**
 
 This Method computes the **log probability** at the given input.
 
@@ -276,7 +277,7 @@ from the prob method.
 
 ```
 
-### Discrete Univariate distribution object
+### :heavy_check_mark: **Discrete Univariate distribution object(Bernoulli distribution)**
 
 In the code below the Bernoulli distribution has one parameter, which is the probability that the random variable takes the value 1.Here we're setting this probability to 0.7 using the probs keyword argument
 
@@ -318,7 +319,7 @@ tfp.distributions.Bernoulli("Bernoulli", batch_shape=[], event_shape=[], dtype=i
 
 > **Note:** The Bernoulli constructor requires either the prompts or the logits keyword argument to be provided, but not both.
 
-### Sampling from the Bernoulli Distribution
+### :heavy_check_mark: **Sampling from the Bernoulli Distribution**
 
 ```python
 import tensorflow as tf
@@ -338,7 +339,9 @@ Here we drawing `3` independent samples from this Bernoulli distribution, which 
 
 > **Note:** that the type of this tensor is different, it's an int 32 tensor, since a Bernoulli random variable is discrete, and can only take the values 0 or 1.
 
-**Compute Probabilities**
+### :heavy_check_mark: **Computing the Probabilities from the Bernoulli Distribution**
+
+#### **`prob()` Method**
 
 ```python
 import tensorflow as tf
@@ -355,7 +358,7 @@ bernoulli.prob(1) # Computing the probability of the event one
 <tf.Tensor: shape=(), dtype=float32, numpy=0.69993746>
 ```
 
-**`log_prob` for Bernoulli distribution\_**
+#### **`log_prob` Method**
 
 ```python
 import tensorflow as tf
@@ -371,7 +374,7 @@ bernoulli.log_prob(1)
 <tf.Tensor: shape=(), dtype=float32, numpy=-0.35676432>
 ```
 
-### `batch_shape` Argument
+### :heavy_check_mark: **`batch_shape` Argument**
 
 Creating another Bernoulli object, Passing in, an array of two values for the probs argument.
 
@@ -417,6 +420,8 @@ array([[0, 1],
 
 **We can also compute the probability given by each distribution in the batch by passing in an array to the prob method**
 
+#### `prob()` Method
+
 ```python
 import tensorflow as tf
 import tensorflow_probability as tfp
@@ -433,7 +438,7 @@ Here we're computing the probability of the event value 1 for each distribution,
 <tf.Tensor: shape=(2,), dtype=float32, numpy=array([0.4, 0.5], dtype=float32)>
 ```
 
-**Calculating the `log_prob`**
+#### `log_prob` Method
 
 ```python
 import tensorflow as tf
@@ -448,7 +453,7 @@ batched_bernoulli.log_prob([1, 1])
 <tf.Tensor: shape=(2,), dtype=float32, numpy=array([-0.9162907, -0.6931472], dtype=float32)>
 ```
 
-### **Que:** _What is the shape of the Tensor that is returned from the following call to the sample method?_
+### :red_circle: **Que:** _What is the shape of the Tensor that is returned from the following call to the sample method?_
 
 ```python
 import tensorflow_probability as tfp
