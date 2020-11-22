@@ -52,7 +52,7 @@ coeffs, linear_response, is_converged, num_iter = tfp.glm.fit(
 
 ## Here are the main Distributions to have in mind
 
-### a) [Binomial Distribution:](https://en.wikipedia.org/wiki/Binomial_distribution)
+### :large_blue_diamond: a) [Binomial Distribution:](https://en.wikipedia.org/wiki/Binomial_distribution)
 
 **What is a Binomial Distribution?**
 
@@ -86,7 +86,7 @@ for `k = 0, 1, 2, ..., n,` where
 
 is the binomial coefficient, hence the name of the distribution. The formula can be understood as follows: k successes occur with probability <a href="https://www.codecogs.com/eqnedit.php?latex=p^k" target="_blank"><img src="https://latex.codecogs.com/gif.latex?p^k" title="p^k" /></a> and `n − k` failures occur with probability `(1 − p)^(n − k)`.
 
-### b) [Poisson Distribution:](https://en.wikipedia.org/wiki/Poisson_distribution)
+### :large_blue_diamond: b) [Poisson Distribution:](https://en.wikipedia.org/wiki/Poisson_distribution)
 
 Poisson distribution is a statistical distribution that shows how many times an event is likely to occur within a specified period of time. It is used for independent events which occur at a constant rate within a given interval of time.
 
@@ -114,7 +114,7 @@ The positive real number `λ` is equal to the expected value of `X` and also to 
 
 The Poisson distribution can be applied to systems with a large number of possible events, each of which is rare. The number of such events that occur during a fixed time interval is, under the right circumstances, a random number with a Poisson distribution.
 
-### c) [Uniform Distribution:](https://en.wikipedia.org/wiki/Continuous_uniform_distribution)
+### :large_blue_diamond: c) [Uniform Distribution:](https://en.wikipedia.org/wiki/Continuous_uniform_distribution)
 
 The distribution in which all outcomes are equally likely. for example: A coin also has a uniform distribution because the probability of getting either heads or tails in a coin toss is the same.
 
@@ -126,7 +126,7 @@ The distribution in which all outcomes are equally likely. for example: A coin a
 
 <img src='https://wikimedia.org/api/rest_v1/media/math/render/svg/e5c664c7665277eea8f74575f4650fa933f28dcb'>
 
-### d) [Gaussian Distribution:](https://en.wikipedia.org/wiki/Normal_distribution)
+### :large_blue_diamond: d) [Gaussian Distribution:](https://en.wikipedia.org/wiki/Normal_distribution)
 
 The **Gaussian Distribution**, is a probability distribution that is **Symmetric** about the mean, showing that data near the mean are more frequent in occurrence than data far from the mean. In graph form, normal distribution will appear as a **bell curve**.
 
@@ -144,7 +144,7 @@ _where_
 
 Their **Importance** is partly due to the **Central Limit Theorem**. It states that, under some conditions, the average of many samples (observations) of a random variable with finite mean and variance is itself a random variable—whose distribution converges to a normal distribution as the number of samples increases.
 
-### e) [Exponential Distribution:](https://towardsdatascience.com/what-is-exponential-distribution-7bdd08590e2a)
+### :large_blue_diamond: e) [Exponential Distribution:](https://towardsdatascience.com/what-is-exponential-distribution-7bdd08590e2a)
 
 #### Why did we have to invent Exponential Distribution?
 
@@ -453,7 +453,7 @@ batched_bernoulli.log_prob([1, 1])
 <tf.Tensor: shape=(2,), dtype=float32, numpy=array([-0.9162907, -0.6931472], dtype=float32)>
 ```
 
-### :red_circle: **Que:** _What is the shape of the Tensor that is returned from the following call to the sample method?_
+#### :triangular*flag_on_post: **Que:** \_What is the shape of the Tensor that is returned from the following call to the sample method*:question:
 
 ```python
 import tensorflow_probability as tfp
