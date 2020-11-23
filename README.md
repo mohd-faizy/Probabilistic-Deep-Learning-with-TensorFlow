@@ -173,7 +173,7 @@ _where:_
 
 ## :black_circle: **a) Univariate distributions**
 
-> Distributions with a single random variable
+> These distributions have an `empty_event` shape, indicating that they are distributions for a **single random variable**.
 
 **Distribution objects** are vital building blocks to build **Probabilistic deep learning Models** as these objects capture the essential operations on probability distributions that we're going to need to build these models.
 
@@ -465,6 +465,223 @@ batched_normal.sample(2)
 **Ans:** `shape=(2, 3)`
 
 ## :black_circle: **b) Multivariate distributions**
+
+### :heavy_check_mark: **Multivariate Gaussian Distribution**
+
+Using the `MultivariateNormalDiag` class to create a two-dimensional diagonal Gaussian
+
+```python
+import tensorflow as tf
+import tensorflow_probability as tfp
+tfd = tfp.distributions
+
+mv_normal = tfd.MultivariateNormalDiag(loc=[-1., 0.5], scale_diag=[1., 1.5])
+print(mv_normal)
+```
+
+```
+# Output
+tfp.distributions.MultivariateNormalDiag("MultivariateNormalDiag", batch_shape=[], event_shape=[2], dtype=float32)
+
+```
+
+**Note:** If we didn't use the `scale_diag` argument, then the **covariance matrix** would be the **identity matrix** by default, that is the standard deviation of one for each component.
+
+> we can access the event shape by using the following code `mv_normal.event_shape` which is `#(2,)`
+
+#### :small_orange_diamond: **Sampling the Multivariate Distribution**
+
+```python
+import tensorflow as tf
+import tensorflow_probability as tfp
+tfd = tfp.distributions
+
+mv_normal = tfd.MultivariateNormalDiag(loc=[-1., 0.5], scale_diag=[1., 1.5])
+mv_normal.sample(3) # This will produce 3 independent samples from the multivariate distribution.
+```
+
+> The distribution has an event shape of `2`, which means that each of those `3` samples will be two-dimensional, so the resulting tensor has a shape of `3` by `2`.
+
+```
+# Output
+<tf.Tensor: shape=(3, 2), dtype=float32, numpy=
+array([[-0.68523514,  0.97463423],
+       [-1.8620067 , -1.7331753 ],
+       [-1.1199658 , -1.0719669 ]], dtype=float32)>
+```
+
+### :heavy_check_mark: **Batch Normal Distribution**
+
+Creating a batch normal distribution by passing in an array of values for both the `loc` and the `scale` arguments. This distribution will have a `batch_shape` of two and an empty or scalar `event_shape`, since the normal is a **univariate distribution**
+
+```python
+import tensorflow as tf
+import tensorflow_probability as tfp
+tfd = tfp.distributions
+
+batched_normal = tfd.Normal(loc=[-1., 0.5], scale=[1., 1.5])
+print(batched_normal)
+```
+
+```
+# Output
+tfp.distributions.Normal("Normal", batch_shape=[2], event_shape=[], dtype=float32)
+```
+
+#### :small_orange_diamond: **Sampling the Batch Normal Distribution**
+
+```python
+import tensorflow as tf
+import tensorflow_probability as tfp
+tfd = tfp.distributions
+
+batched_normal = tfd.Normal(loc=[-1., 0.5], scale=[1., 1.5])
+batched_normal.sample(3)
+```
+
+```
+# Output
+<tf.Tensor: shape=(3, 2), dtype=float32, numpy=
+array([[-0.9501647 , -1.041851  ],
+       [-0.5308881 , -0.77874947],
+       [-2.6619897 , -1.2877599 ]], dtype=float32)>
+```
+
+### :large_orange_diamond: **Comparing the Multivariate Gaussian Distribution & Batch Normal Distribution**
+
+```
+# Output Multivariate Gaussian Distribution
+tfp.distributions.MultivariateNormalDiag("MultivariateNormalDiag", batch_shape=[], event_shape=[2], dtype=float32)
+
+# Output Batch Normal Distribution
+tfp.distributions.Normal("Normal", batch_shape=[2], event_shape=[], dtype=float32)
+```
+
+- `MultivariateNormalDiag` distribution is a distribution of a **2D** random variable, as `event_shape=[2]`.
+
+- The `Normal` distribution below is a batch of two distributions of a single random variable, `batch_shape=[2]` and `event_shape=[]` being empty.
+
+#### Computing the `log_probs` fo r both
+
+:small_blue_diamond: **For Multivariate Distribution:**
+
+```python
+import tensorflow as tf
+import tensorflow_probability as tfp
+tfd = tfp.distributions
+
+mv_normal = tfd.MultivariateNormalDiag(loc=[-1., 0.5], scale_diag=[1., 1.5])
+mv_normal.log_prob([0.2, -1.8])
+```
+
+```
+# Output
+<tf.Tensor: shape=(), dtype=float32, numpy=-4.1388974>
+```
+
+when we pass in a length two array to the `log_prob method`, this array represents a single realization of the two-dimensional random variable. Correspondingly, the tensor that is returned contains a single `log_prob` value.
+
+:small_blue_diamond: **For Batch Normal Distribution:**
+
+```python
+import tensorflow as tf
+import tensorflow_probability as tfp
+tfd = tfp.distributions
+
+batched_normal = tfd.Normal(loc=[-1., 0.5], scale=[1., 1.5])
+batched_normal.log_prob([0.2, -1.8])
+```
+
+```
+# Output
+<tf.Tensor: shape=(2,), dtype=float32, numpy=array([-1.6389385, -2.499959 ], dtype=float32)>
+```
+
+Here, the input array represents a value for each of the random variables for the two normal distributions in the batch. The `log_ probs` for each of these two realizations are evaluated and return these two values in a length two tensor, as we can see above.
+
+### :heavy_check_mark: **Batch Multivariate Distribution**
+
+```python
+import tensorflow as tf
+import tensorflow_probability as tfp
+tfd = tfp.distributions
+
+batched_mv_normal = tfd.MultivariateNormalDiag(
+    loc=[[-1., 0.5],[2., 0], [-0.5, 1.5]],
+    scale_diag=[[1., 1.5], [2., 0.5], [1., 1.]]
+    )
+
+print(batched_mv_normal)
+```
+
+```
+# Output
+tfp.distributions.MultivariateNormalDiag(
+    "MultivariateNormalDiag",
+    batch_shape=[3],
+    event_shape=[2],
+    dtype=float32
+    )
+```
+
+- In the above distributions Each argument is taking a `3` by `2` array. The last dimension corresponds to the `event_size`, and remaining dimensions get absorbed into the `batch_shape`.
+
+- That means that this `MultivariateNormalDiag` distribution has an `event_shape=[2]` and `batch_shape=[3]`. In other words, it contains a batch of three multivariate Gaussians, each of which is a distribution over a two-dimensional random variable.
+
+#### :small_orange_diamond: **Sampling above Distribution**
+
+```python
+import tensorflow as tf
+import tensorflow_probability as tfp
+tfd = tfp.distributions
+
+batched_mv_normal = tfd.MultivariateNormalDiag(
+    loc=[[-1., 0.5],[2., 0], [-0.5, 1.5]],
+    scale_diag=[[1., 1.5], [2., 0.5], [1., 1.]]
+    )
+
+batched_mv_normal.sample(2)
+```
+
+```
+# Output
+<tf.Tensor: shape=(2, 3, 2), dtype=float32, numpy=
+array([[[-1.7474746 , -0.39185297],
+        [ 2.605815  , -0.6507868 ],
+        [-0.2742607 ,  1.7156713 ]],
+
+       [[-0.22726142, -0.8659065 ],
+        [ 1.665063  ,  0.9733336 ],
+        [-0.57607734,  3.7140775 ]]], dtype=float32)>
+```
+
+In the Tensor: `shape=(2, 3, 2)`:
+
+- The first `2` here comes from the `sample_size` of two.
+- The `3`is the `batch_size`.
+- The final `2` is the `event_size` of the distribution
+
+### :triangular_flag_on_post: Suppose we define the following `MultivariateNormalDiag` object:
+
+```python
+import tensorflow_probability as tfp
+tfd = tfp.distributions
+batched_mv_normal = tfd.MultivariateNormalDiag(
+    loc=[[0.3, 0.8, 1.1], [2.3, -0.3, -1.]],
+    scale_diag=[[1.5, 1., 0.4], [2.5, 1.5, 0.5]])
+
+# Que: What is the shape of the Tensor returned by the following?
+batched_mv_normal.log_prob([0., -1., 1.])
+```
+
+**Ans:** `shape=(2,)`
+
+```
+# Output
+<tf.Tensor: shape=(2,), dtype=float32, numpy=array([ -3.9172401, -11.917513 ], dtype=float32)>
+```
+
+> This section shows how `sample`, `batch`, and `event_shapes` are used in distribution objects. And By designing distribution objects in this way, the **TensorFlow probability library** can exploit the **Performance gains** from **Vectorizing Computations**
 
 ## :black_circle: **c) The Independent distribution**
 
