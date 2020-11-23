@@ -453,7 +453,7 @@ batched_bernoulli.log_prob([1, 1])
 <tf.Tensor: shape=(2,), dtype=float32, numpy=array([-0.9162907, -0.6931472], dtype=float32)>
 ```
 
-### :triangular_flag_on_post: **Que:** What is the shape of the Tensor that is returned from the following call to the sample method :question:
+### :triangular_flag_on_post: Que :one: What is the shape of the Tensor that is returned from the following call to the sample method :question:
 
 ```python
 import tensorflow_probability as tfp
@@ -463,6 +463,13 @@ batched_normal.sample(2)
 ```
 
 **Ans:** `shape=(2, 3)`
+
+```
+# Output
+<tf.Tensor: shape=(2, 3), dtype=float32, numpy=
+array([[0.7245038 , 0.02775155, 2.3153021 ],
+       [0.9195015 , 0.20723073, 1.4882771 ]], dtype=float32)>
+```
 
 ## :black_circle: **b) Multivariate distributions**
 
@@ -561,7 +568,7 @@ tfp.distributions.Normal("Normal", batch_shape=[2], event_shape=[], dtype=float3
 
 - The `Normal` distribution below is a batch of two distributions of a single random variable, `batch_shape=[2]` and `event_shape=[]` being empty.
 
-#### Computing the `log_probs` fo r both
+#### Computing the `log_probs` for both Distributions
 
 :small_blue_diamond: **For Multivariate Distribution:**
 
@@ -661,7 +668,7 @@ In the Tensor: `shape=(2, 3, 2)`:
 - The `3`is the `batch_size`.
 - The final `2` is the `event_size` of the distribution
 
-### :triangular_flag_on_post: Suppose we define the following `MultivariateNormalDiag` object:
+### :triangular_flag_on_post: Que :two: Suppose we define the following `MultivariateNormalDiag` object:
 
 ```python
 import tensorflow_probability as tfp
