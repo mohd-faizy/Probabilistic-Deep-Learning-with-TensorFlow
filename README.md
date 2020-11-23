@@ -2,7 +2,9 @@
 [![Python](https://img.shields.io/badge/python%20-%2314354C.svg?&style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/downloads/)
 [![made-with-Markdown](https://img.shields.io/badge/markdown-%23000000.svg?&style=for-the-badge&logo=markdown&logoColor=white)](http://commonmark.org)
 [![PyPI license](https://img.shields.io/pypi/l/ansicolortags.svg)](https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/blob/main/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow)](https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/issues)
 [![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://opensource.com/resources/what-open-source)
+
 
 # **Probabilistic Deep Learning with TensorFlow**
 
