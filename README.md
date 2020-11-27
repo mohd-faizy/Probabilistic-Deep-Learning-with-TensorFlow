@@ -12,6 +12,7 @@
 
 > **Documentation**: [tfp_api_docs](https://www.tensorflow.org/probability/api_docs/python/tfp)
 
+
 ## **Why is probabilistic programming important for deep learning?**
 
 - The use of statistics to overcome uncertainty is one of the pillars of a large segment of the machine learning. Probabilistic reasoning has long been considered one of the foundations of inference algorithms and is represented is all major machine learning frameworks and platforms.
@@ -166,6 +167,10 @@ _where:_
 
 - `λ` = Rate parameter
 - `x` = Random variable
+
+## __Learning Path__
+
+<img src='https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/blob/main/Tensorflow_Dev_png/Probabilistic%20Deep%20Learning%20Map.png'>
 
 ---
 
