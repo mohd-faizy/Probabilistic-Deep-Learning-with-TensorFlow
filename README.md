@@ -1,9 +1,14 @@
-[![Made withJupyter](https://img.shields.io/badge/Made%20with-Jupyter-orange?style=for-the-badge&logo=Jupyter)](https://jupyter.org/)
-[![Python](https://img.shields.io/badge/python%20-%2314354C.svg?&style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/downloads/)
-[![made-with-Markdown](https://img.shields.io/badge/markdown-%23000000.svg?&style=for-the-badge&logo=markdown&logoColor=white)](http://commonmark.org)
-[![PyPI license](https://img.shields.io/pypi/l/ansicolortags.svg)](https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/blob/main/LICENSE)
+![author](https://img.shields.io/badge/author-mohd--faizy-red)
+![made-with-Markdown](https://img.shields.io/badge/Made%20with-markdown-blue)
+![Language](https://img.shields.io/github/languages/top/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow)
+![Platform](https://img.shields.io/badge/platform-jupyter%20labs-blue)
+![Maintained](https://img.shields.io/maintenance/yes/2020)
+![Last Commit](https://img.shields.io/github/last-commit/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow)
 [![GitHub issues](https://img.shields.io/github/issues/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow)](https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/issues)
 [![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://opensource.com/resources/what-open-source)
+![Stars GitHub](https://img.shields.io/github/stars/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow)
+[![GitHub license](https://img.shields.io/github/license/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow)](https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/blob/master/LICENSE)
+![Size](https://img.shields.io/github/repo-size/mohd-faizy/Machine-Learning-Algorithms)
 
 
 # **Probabilistic Deep Learning with TensorFlow**
