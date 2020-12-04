@@ -176,7 +176,7 @@ _where:_
 <img src='https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/blob/main/Tensorflow_Dev_png/Probabilistic%20Deep%20Learning%20Map.png'>
 
 <p align='left'>
-  <a href="#"><img src='https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/blob/main/Tensorflow_Dev_png/my_notes.png?raw=true' width=400px height=220px alt="my_notes"></a>
+  <a href="#"><img src='https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/blob/main/Tensorflow_Dev_png/my_notes.png?raw=true' width=150px height=100px alt="my_notes"></a>
 </p>
 
 :one: [:heavy_check_mark: **The TensorFlow Probability library**](https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/tree/main/01_The%20TensorFlow_Probability_library)
