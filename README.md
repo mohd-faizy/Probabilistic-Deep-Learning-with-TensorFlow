@@ -175,6 +175,20 @@ _where:_
 
 <img src='https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/blob/main/Tensorflow_Dev_png/Probabilistic%20Deep%20Learning%20Map.png'>
 
+<p align='left'>
+  <a href="#"><img src='https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/blob/main/Tensorflow_Dev_png/my_notes.png?raw=true' width=400px height=220px alt="my_notes"></a>
+</p>
+
+:one: [:heavy_check_mark: **The TensorFlow Probability library**](https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/tree/main/01_The%20TensorFlow_Probability_library)
+
+:two: [:heavy_check_mark: **Probabilistic layers and Bayesian neural networks**](https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/tree/main/02_Probabilistic_layers_and_Bayesian_Neural_Networks)
+
+:three: [:heavy_check_mark: **Probabilistic layers and Bayesian neural networks**](https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/tree/main/03_Bijectors_and_Normalising_Flows)
+
+:four: [:heavy_check_mark: **Variational autoencoders**](https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/tree/main/04_Variational_Autoencoders)
+
+:five: [:heavy_check_mark: **Capstone Project**](https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/tree/main/05_Capstone_Project)
+
 ## Other Resources
 
 - YouTube [StatQuest](https://www.youtube.com/channel/UCtYLUTtgS3k1Fg4y5tAhLbw)
