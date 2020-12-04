@@ -533,7 +533,7 @@ But sometimes we might want to reinterpret a batch of independent distributions 
 
 > For **example**, our model might assume that the features of our data are independent given a class label. In this case, we could set up a separate class conditional distribution for each feature in a batch. But this batch of distributions is really a **joint distribution** over all the features, and we'd like that to be reflected in the `batch_shape` and `event_shape` properties, and the outputs of the `log_probs` method. This is precisely the setting of the **Naive Bayes classifier.**
 
-### Naive Bayes classifier :question::question:
+### Naive Bayes classifier :question::question::question:
 
 In statistics, **Naive Bayes classifiers** are a family of simple `probabilistic classifiers` based on applying `Bayes theorem` with strong assumption that the value of a particular feature is **Independent** of the value of any other feature, given the class variable.They are among the simplest Bayesian network models, but coupled with **Kernel density estimation**, they can achieve higher accuracy levels.
 
@@ -606,6 +606,91 @@ batched_normal = tfd.Normal(loc=[-1., 0.5], scale=[1., 1.5])
 
 independent_normal = tfd.Independent(batched_normal, reinterpreted_batch_ndims=1)
 print(independent_normal)
+```
+
+> The `reinterpreted_batch_ndims` argument is an optional keyword argument, that specifies how many of the batch dimensions should be absorbed into the event space.
+
+```
+# Output
+
+tfp.distributions.Independent("IndependentNormal", batch_shape=[], event_shape=[2], dtype=float32)
+```
+
+Since there's only one batch dimension, which is equal to two, this will become part of the `event_space`.
+
+```python
+import tensorflow as tf
+import tensorflow_probability as tfp
+tfd = tfp.distributions
+
+batched_normal = tfd.Normal(loc=[-1., 0.5], scale=[1., 1.5])
+
+independent_normal = tfd.Independent(batched_normal, reinterpreted_batch_ndims=1)
+independent_normal.log_prob([-0.2, 1.8])
+```
+
+:point_up: So If we again compute the `log_prob` of an input array of **length 2** , we now see that the result is a **Scalar**, just as we had with the `MultivariateNormalDiag` distribution. Mathematically, this **independent distribution** is now equivalent to the `MultivariateNormalDiag` distribution we had before.
+
+```
+# Output
+
+<tf.Tensor: shape=(), dtype=float32, numpy=-2.9388976>
+```
+
+:point_right:**Another Example of independent Distribution:**
+
+```python
+import tensorflow as tf
+import tensorflow_probability as tfp
+tfd = tfp.distributions
+
+batched_normal = tfd.Normal(loc=[[-1., 0.5], [0., 1.], [0.3, -0.1]],
+                            scale=[[1., 1.5], [0.2, 0.8], [2., 1.]])
+print(batched_normal)
+
+independent_normal = tfd.Independent(batched_normal, reinterpreted_batch_ndims=1)
+print(independent_normal)
+
+```
+
+```
+# Output
+
+tfp.distributions.Normal("Normal", batch_shape=[3, 2], event_shape=[], dtype=float32)
+
+tfp.distributions.Independent("IndependentNormal", batch_shape=[3], event_shape=[2], dtype=float32)
+```
+
+The default value for `reinterpreted_batch_ndims` is none, and with this default, the independent distribution will take **all batch dimensions except the first into the** `event_space`.
+
+### when `reinterpreted_batch_ndims=2`:question::question::question:
+
+If we wanted to transfer both **batch dimensions** into the `event_space`, then set `reinterpreted_batch_ndims=2`. the result is an independent distribution with an empty `batch_shape=[]` and a **rank2** `event_shape=[3,2]`. So we use independent distributions to manipulate the `batch_shape` and `event_shape` properties of distributions. **This is a useful tool that we can use to create distributions that have the properties that we want.**
+
+```
+# Output
+
+tfp.distributions.Normal("Normal", batch_shape=[3, 2], event_shape=[], dtype=float32)
+
+tfp.distributions.Independent("IndependentNormal", batch_shape=[], event_shape=[3, 2], dtype=float32)
+```
+
+### :triangular_flag_on_post: Que :three: What is the shape of the Tensor that is returned from the following call to the log_prob method :question::question::question:
+
+```python
+import numpy as np
+import tensorflow_probability as tfp
+tfd = tfp.distributions
+
+probs = 0.5 * tf.ones((2, 4, 5))
+dist = tfd.Independent(tfd.Bernoulli(probs=probs))
+dist.log_prob(np.zeros((4, 5)))
+```
+
+```
+# Output
+
+<tf.Tensor: shape=(2,), dtype=float32, numpy=array([-13.862944, -13.862944], dtype=float32)>
 ```
 
 ## :black_circle: **d) Sampling and log probs**
