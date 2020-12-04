@@ -2,13 +2,21 @@
 
 ---
 
-# :zero::one: **The TensorFlow Probability library**
+<strong> 
+    <h1 align='center'>The TensorFlow Probability library</h1> 
+</strong>
 
 ---
 
-## :black_circle: **a) Univariate distributions**
+---
 
-> These distributions have an `empty_event` shape, indicating that they are distributions for a **single random variable**.
+<strong> 
+    <h2 align='center'>a) Univariate distributions</h2> 
+</strong>
+
+---
+
+These distributions have an `empty_event` shape, indicating that they are distributions for a **single random variable**.
 
 **Distribution objects** are vital building blocks to build **Probabilistic deep learning Models** as these objects capture the essential operations on probability distributions that we're going to need to build these models.
 
@@ -306,7 +314,13 @@ array([[0.7245038 , 0.02775155, 2.3153021 ],
        [0.9195015 , 0.20723073, 1.4882771 ]], dtype=float32)>
 ```
 
-## :black_circle: **b) Multivariate distributions**
+---
+
+<strong> 
+    <h2 align='center'>b) Multivariate distributions</h2> 
+</strong>
+
+---
 
 ### :heavy_check_mark: **Multivariate Gaussian Distribution**
 
@@ -525,7 +539,13 @@ batched_mv_normal.log_prob([0., -1., 1.])
 
 > This section shows how `sample`, `batch`, and `event_shapes` are used in distribution objects. And By designing distribution objects in this way, the **TensorFlow probability library** can exploit the **Performance gains** from **Vectorizing Computations**
 
-## :black_circle: **c) The Independent distribution**
+---
+
+<strong> 
+    <h2 align='center'>c) The Independent distribution</h2> 
+</strong>
+
+---
 
 When we compute `log_probs` of an `input_event`, -- distribution calculates the **log probability** of _each event in the batch of distributions_ and _returns a single number for each distribution in the batch_.
 
@@ -695,7 +715,13 @@ dist.log_prob(np.zeros((4, 5)))
 <tf.Tensor: shape=(2,), dtype=float32, numpy=array([-13.862944, -13.862944], dtype=float32)>
 ```
 
-## :black_circle: **d) Sampling and log probs**
+---
+
+<strong> 
+    <h2 align='center'>d) Sampling and log probs</h2> 
+</strong>
+
+---
 
 ```python
 import tensorflow_probability as tfp
@@ -923,4 +949,10 @@ dist.log_prob(tf.random.uniform((2, 1, 1, 4)))
 
 > Using the above methods we can understand of how `sample_shape`, `batch_shape` and `event_shapes` behave, particularly when it comes to **Creating distribution objects** and using the `sample` or `log_prob` methods we can also apply the **broadcasting** to these methods or instantiating a distribution objects.
 
-## :black_circle: **e) Trainable distributions**
+---
+
+<strong> 
+    <h2 align='center'>e) Trainable distributions</h2> 
+</strong>
+
+---
