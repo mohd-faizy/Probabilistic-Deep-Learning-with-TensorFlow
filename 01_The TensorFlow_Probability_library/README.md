@@ -288,7 +288,7 @@ batched_bernoulli.log_prob([1, 1])
 <tf.Tensor: shape=(2,), dtype=float32, numpy=array([-0.9162907, -0.6931472], dtype=float32)>
 ```
 
-### :triangular_flag_on_post: Que :one: What is the shape of the Tensor that is returned from the following call to the sample method :question:
+### :triangular_flag_on_post: Que :one: What is the shape of the Tensor that is returned from the following call to the sample method:question::question::question:
 
 ```python
 import tensorflow_probability as tfp
@@ -503,7 +503,7 @@ In the Tensor: `shape=(2, 3, 2)`:
 - The `3`is the `batch_size`.
 - The final `2` is the `event_size` of the distribution
 
-### :triangular_flag_on_post: Que :two: Suppose we define the following `MultivariateNormalDiag` object:
+### :triangular_flag_on_post: Que :two: Suppose we define the following `MultivariateNormalDiag` object:question::question::question:
 
 ```python
 import tensorflow_probability as tfp
@@ -675,7 +675,7 @@ tfp.distributions.Normal("Normal", batch_shape=[3, 2], event_shape=[], dtype=flo
 tfp.distributions.Independent("IndependentNormal", batch_shape=[], event_shape=[3, 2], dtype=float32)
 ```
 
-### :triangular_flag_on_post: Que :three: What is the shape of the Tensor that is returned from the following call to the log_prob method :question::question::question:
+### :triangular_flag_on_post: Que :three: What is the shape of the Tensor that is returned from the following call to the log_prob method:question::question::question:
 
 ```python
 import numpy as np
@@ -696,5 +696,231 @@ dist.log_prob(np.zeros((4, 5)))
 ```
 
 ## :black_circle: **d) Sampling and log probs**
+
+```python
+import tensorflow_probability as tfp
+tfd = tfp.distributions
+
+# Univariate Distribution
+# Passing Rate as a (2x3) array
+exp = tfd.Exponential(rate=[[1., 1.5, 0.8], [0.3, 0.4, 1.8]])
+print(exp)
+```
+
+```
+# output
+
+tfp.distributions.Exponential("Exponential", batch_shape=[2, 3], event_shape=[], dtype=float32)
+```
+
+- Empty `event_shape=[]` indicate that it's a **Scalar Random Variable**.
+
+#### Let's apply the independent distribution
+
+```python
+import tensorflow_probability as tfp
+tfd = tfp.distributions
+
+exp = tfd.Exponential(rate=[[1., 1.5, 0.8], [0.3, 0.4, 1.8]])
+ind_exp = tfd.Independent(exp)
+print(ind_exp)
+```
+
+**Note:** We not passing in the `reinterpreted_batch_ndims` keyword argument, so the independent distribution by default is converting all but the first batch dimension into the `event_shape`.
+
+So we Now have a `batch_shape=[2]` and an `event_shape=[3]`
+
+```
+# Output
+
+tfp.distributions.Independent("IndependentExponential", batch_shape=[2], event_shape=[3], dtype=float32)
+```
+
+### Sampling the Independent distribution:
+
+```python
+import tensorflow_probability as tfp
+tfd = tfp.distributions
+
+exp = tfd.Exponential(rate=[[1., 1.5, 0.8], [0.3, 0.4, 1.8]])
+ind_exp = tfd.Independent(exp)
+ind_exp.sample(4)
+```
+
+This will return the tensor of `shape=(4, 2, 3)`
+**Order**:
+
+- `sample_shape` comes first - `4`
+- then `batch_shape` - `2`
+- finally `event_shape` - `3`
+
+```
+# Output
+
+<tf.Tensor: shape=(4, 2, 3), dtype=float32, numpy=
+array([[[0.878214  , 0.10177544, 1.0854489 ],
+        [0.0861064 , 0.39792454, 0.10340352]],
+
+       [[1.7000741 , 0.3063202 , 0.5343896 ],
+        [7.7648444 , 0.5894142 , 0.27669817]],
+
+       [[0.07917001, 0.05815649, 0.03421117],
+        [4.5987663 , 0.6690836 , 0.10257661]],
+
+       [[0.34468663, 0.5017041 , 1.0447694 ],
+        [1.6518481 , 3.3994725 , 0.06371849]]], dtype=float32)>
+```
+
+### Creating exponential distribution of rank 4
+
+```python
+import tensorflow_probability as tfp
+tfd = tfp.distributions
+
+rates = [
+        [[[1., 1.5, 0.8], [0.3, 0.4, 1.8]]],
+        [[[0.2, 0.4, 1.4], [0.4, 1.1, 0.9]]]
+]
+
+exp = tfd.Exponential(rate=rates)
+print(exp)
+
+ind_exp = tfd.Independent(exp, reinterpreted_batch_ndims=2)
+print(ind_exp)
+
+```
+
+- **Exponential** `batch_shape=[2, 1, 2, 3]`, `event_shape=[]` : Since the exponential distribution is a univariate distribution, all of these dimensions will become part of the `batch_shape` and the `event_shape` will be empty.
+
+- **IndependentExponential** `batch_shape=[2, 1]`, `event_shape=[2, 3]`: here we have a distribution with a **rank-2** `batch_shape` and a **rank-2** `event_shape`. The independent distribution has **absorbed** the last two batch dimensions into the `event_space`.
+
+### Now Sampling the above distribution
+
+```python
+import tensorflow_probability as tfp
+tfd = tfp.distributions
+
+rates = [
+        [[[1., 1.5, 0.8], [0.3, 0.4, 1.8]]],
+        [[[0.2, 0.4, 1.4], [0.4, 1.1, 0.9]]]
+]
+
+exp = tfd.Exponential(rate=rates)
+
+ind_exp = tfd.Independent(exp, reinterpreted_batch_ndims=2)
+ind_exp.sample([4, 2])
+```
+
+**Outputs the Tensor of `shape=(4, 2, 2, 1, 2, 3)`**
+
+**The resulting tensor will be rank-6**
+
+- `sample_shape` **(4 X 2)**
+- `batch_shape` **(2 X 1)**
+- `event_shape` **(2 X 3)**
+
+### Using the `log_prob` Method on Independent distribution
+
+This is a simple example of using **broadcasting** when computing `log probs`.
+
+```python
+import tensorflow_probability as tfp
+tfd = tfp.distributions
+
+rates = [
+        [[[1., 1.5, 0.8], [0.3, 0.4, 1.8]]],
+        [[[0.2, 0.4, 1.4], [0.4, 1.1, 0.9]]]
+]
+
+exp = tfd.Exponential(rate=rates)
+
+ind_exp = tfd.Independent(exp, reinterpreted_batch_ndims=2)
+ind_exp.log_prob(0.5)
+```
+
+Remember the `event_shape` of our distribution is `(2 X 3)`, so the distribution will compute the **log probability** for _each event in the batch_. This means that the `0.5` input will be **broadcast** to both the `event_shape` & `batch_shape`.
+
+```
+# Output
+
+<tf.Tensor: shape=(2, 1), dtype=float32, numpy=
+array([[-4.2501554],
+       [-5.3155975]], dtype=float32)>
+```
+
+Think of this as computing `log probs` for `(2 X 3)` event, where each `entry = 0.5` & the **log probability** for this event is computed for each distribution in the `batch`.
+
+### Passing (1 x 3) shape input in `log_prob` Method
+
+```python
+import tensorflow_probability as tfp
+tfd = tfp.distributions
+
+rates = [
+        [[[1., 1.5, 0.8], [0.3, 0.4, 1.8]]],
+        [[[0.2, 0.4, 1.4], [0.4, 1.1, 0.9]]]
+]
+
+exp = tfd.Exponential(rate=rates)
+
+ind_exp = tfd.Independent(exp, reinterpreted_batch_ndims=2)
+ind_exp.log_prob([[0.3, 0.5, 0.8]]) # Shape - (1, 3)
+```
+
+```
+# Output
+
+<tf.Tensor: shape=(2, 1), dtype=float32, numpy=
+array([[-4.7701554],
+       [-5.885597 ]], dtype=float32)>
+```
+
+So According to the broadcasting rules, this is broadcastable against the `batch_shape` and `event_shape` of `(2 X 1 X 2 X 3)`. So in this case, the input will be broadcast against the first dimension of the `event_shape` as well as both dimensions of the `batch_shape`. The result is again, a tensor with the **same shape** as the **batch_shape**.
+
+### Passing the Rank-5 input in `log_prob` Method
+
+```python
+import tensorflow as tf
+import tensorflow_probability as tfp
+tfd = tfp.distributions
+
+rates = [
+        [[[1., 1.5, 0.8], [0.3, 0.4, 1.8]]],
+        [[[0.2, 0.4, 1.4], [0.4, 1.1, 0.9]]]
+]
+
+exp = tfd.Exponential(rate=rates)
+
+ind_exp = tfd.Independent(exp, reinterpreted_batch_ndims=2)
+ind_exp.log_prob(tf.random.uniform((5, 1, 1, 2, 1)))
+```
+
+**Queston** Is, this input broadcastable against the `batch_shape` and `event_shape` of `[B, E] = [2 x 1 x 2 x 3]` If it is, what is the resulting tensor shape returned by the log prob method:question::question::question:
+
+The answer is yes, it is broadcastable against the `batch_shape` & `event_shape`.
+
+- The **last dimension** of the input will be broadcast against the **second dimension** of the `event_shape` and
+- The **second dimension** of the input will be broadcast against the **first dimension** of the `batch_shape`.
+
+we can think of this extra dimension of five which is here as being the `sample_shape`. So the **log probability** will be computed for **Each Event** of **Each Batch** and for **Each Sample**. The resulting tensor is then going to be the concatenation of sample and `batch_shapes`, which is **Output** = `Tensor: shape=(5, 2, 1)`
+
+### :triangular_flag_on_post: Que :four: Suppose we define the following MultivariateNormalDiag object:question::question::question:
+
+```python
+import tensorflow as tf
+import tensorflow_probability as tfp
+tfd = tfp.distributions
+
+loc = tf.zeros((2, 3, 1))
+scale_diag = tf.ones(4)
+dist = tfd.Independent(tfd.MultivariateNormalDiag(loc=loc, scale_diag=scale_diag))
+
+# What is the shape of the Tensor returned by the following?
+dist.log_prob(tf.random.uniform((2, 1, 1, 4)))
+```
+
+**Answer** `Tensor: shape=(2, 2)`
+
+> Using the above methods we can understand of how `sample_shape`, `batch_shape` and `event_shapes` behave, particularly when it comes to **Creating distribution objects** and using the `sample` or `log_prob` methods we can also apply the **broadcasting** to these methods or instantiating a distribution objects.
 
 ## :black_circle: **e) Trainable distributions**
