@@ -972,3 +972,69 @@ dist.log_prob(tf.random.uniform((2, 1, 1, 4)))
 </strong>
 
 ---
+
+### **Making the parameters of distribution objects trainable**
+
+This is smae as using an **optimizer object** to apply gradients obtained from a loss function and data.Let's take a **Normal distribution** object as an example And let's say **we want to learn the mean of this distribution**.
+
+```python
+import tensorflow as tf
+import tensorflow_probability as tfp
+tfd = tfp.distributions
+
+normal = tfd.Normal(loc=tf.Variable(0., name='loc'), scale=1.)
+normal.trainable_variables # The distribution object also has a trainable variables attribute
+```
+
+```
+# Output
+(<tf.Variable 'loc:0' shape=() dtype=float32, numpy=0.0>,)
+```
+
+The `mean value` of this normal distribution is now trainable and can be updated according to some learning principle. The learning principle that we often use when training deep learning models is **Maximum likelihood**. The goal is to maximize the likelihood or probability of our data.
+
+Finding the parameters that maximize the likelihood is the same as finding the parameters that minimize the negative log likelihood.
+
+hence defining the **negative log likelihood** of our simple model as a function of a training set as `x_train`. `x_train` is an **array of scalar data points**. Then we can compute the **log probability** of these data points according to our model, using the `log_prob` method and this method will return a tensor that is the same shape as `x_train`.
+
+For the above Example we don't need to run an **Optimization** procedure to find the value of the variable that **Minimizes the negative log likelihood**. We can just solve this directly. The answer will be the mean of the data points in x_train
+
+```python
+
+import tensorflow as tf
+import tensorflow_probability as tfp
+tfd = tfp.distributions
+
+normal = tfd.Normal(loc=tf.Variable(0., name='loc'), scale=1.)
+
+def nll(x_train):
+    return -tf.reduce_mean(normal.log_prob(x_train))
+
+'''
+This function get_loss_and_grads takes a batch of training examples as an input
+and computes the loss and gradients for our model.
+'''
+@tf.function
+def get_loss_and_grads(x_train):
+    with tf.GradientTape() as tape:
+        tape.watch(normal.trainable_variables)
+        loss = nll(x_train)
+    grads = tape.Gradient(loss, normal.trainable_variables)
+    return loss, grads
+
+optimizer = tf.keras.optimizers.SGD(learning_rate=0.05)
+
+for _ in range(num_steps):
+    loss, grads = get_loss_and_grads(x_samples)
+    optimizer.apply_gradient(zip(grads, normal.trainable_variables))
+```
+
+- To compute the gradients, we set up a `tf.GradientTape` context and start with a **call** to `tape.watch` to specify the variables that we want to track in the operations that follow. Here, that's the trainable variables of our normal distribution.
+
+- The loss that we want to compute is the **negative log likelihood** as given by our `nll function`. Finally, we can now compute the **gradient of the loss** with respect to the **trainable variables** of our distribution with a call to `tape.gradient`.
+
+- **The calculation of the loss and gradients is where most of the heavy lifting happens in terms of computation.** So we can help to speed this up by using the `@tf.function` decorator, and this makes a graph out of the function.
+
+- The last thing we need to do is to define our **training loop**. We'll use an **Optimizer object** to update the **Trainable Variables**, and here I'm setting up an **SGD optimizer** with a **learning rate of 0.05**.
+
+- There's no batching going on, and the loss and gradients are being computed on the entire training data `x_samples` in each iteration of the loop.
