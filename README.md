@@ -10,13 +10,11 @@
 [![GitHub license](https://img.shields.io/github/license/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow)](https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/blob/master/LICENSE)
 ![Size](https://img.shields.io/github/repo-size/mohd-faizy/Machine-Learning-Algorithms)
 
-
 # **Probabilistic Deep Learning with TensorFlow**
 
 <img src='https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/blob/main/Tensorflow_Dev_png/head.png'>
 
 > **Documentation**: [tfp_api_docs](https://www.tensorflow.org/probability/api_docs/python/tfp)
-
 
 ## **Why is probabilistic programming important for deep learning?**
 
@@ -173,7 +171,7 @@ _where:_
 - `λ` = Rate parameter
 - `x` = Random variable
 
-## __Learning Path__
+## **Learning Path**
 
 <img src='https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/blob/main/Tensorflow_Dev_png/Probabilistic%20Deep%20Learning%20Map.png'>
 
@@ -703,6 +701,87 @@ batched_mv_normal.log_prob([0., -1., 1.])
 > This section shows how `sample`, `batch`, and `event_shapes` are used in distribution objects. And By designing distribution objects in this way, the **TensorFlow probability library** can exploit the **Performance gains** from **Vectorizing Computations**
 
 ## :black_circle: **c) The Independent distribution**
+
+When we compute `log_probs` of an `input_event`, -- distribution calculates the **log probability** of _each event in the batch of distributions_ and _returns a single number for each distribution in the batch_.
+
+But sometimes we might want to reinterpret a batch of independent distributions over an `event_space` as a single joint distribution over a product of `event_spaces`.
+
+> For **example**, our model might assume that the features of our data are independent given a class label. In this case, we could set up a separate class conditional distribution for each feature in a batch. But this batch of distributions is really a **joint distribution** over all the features, and we'd like that to be reflected in the `batch_shape` and `event_shape` properties, and the outputs of the `log_probs` method. This is precisely the setting of the **Naive Bayes classifier.**
+
+### Naive Bayes classifier :question::question:
+
+In statistics, **Naive Bayes classifiers** are a family of simple `probabilistic classifiers` based on applying `Bayes theorem` with strong assumption that the value of a particular feature is **Independent** of the value of any other feature, given the class variable.They are among the simplest Bayesian network models, but coupled with **Kernel density estimation**, they can achieve higher accuracy levels.
+
+:checkered_flag::checkered_flag::checkered_flag:
+
+> **For Example**, A **fruit** may be considered to be an `apple` :apple: if it is red , round, and about 10 cm in diameter. A naive Bayes classifier considers each of these features to contribute **independently** to the probability that this fruit is an apple, regardless of any possible correlations between the color, roundness, and diameter features.
+
+:anchor: **Below** :anchor: is the `MultivariateNormalDiag` distribution, which has a two-dimensional `event_space`, and an instance of the Univariate Normal dDistribution, which instead has a `batch_shape` of two.
+
+```python
+# Importing tensorflow probability library
+import tensorflow as tf
+import tensorflow_probability as tfp
+tfd = tfp.distributions
+
+# Instance of a multivariate Distributions
+mv_normal = tfd.MultivariateNormalDiag(loc=[-1., 0.5], scale_diag=[1., 1.5])
+print(mv_normal)
+
+'''
+tfp.distributions.MultivariateNormalDiag("MultivariateNormalDiag",
+                                          batch_shape=[],
+                                          event_shape=[2],
+                                          dtype=float32
+                                          )
+'''
+# Instance of a univariate Distributions
+batched_normal = tfd.Normal(loc=[-1., 0.5], scale=[1., 1.5])
+print(batched_normal)
+
+'''
+tfp.distributions.Normal("Normal",
+                          batch_shape=[2],
+                          event_shape=[],
+                          dtype=float32
+                          )
+'''
+```
+
+<table style="border-collapse: collapse; width: 100%;" border="1">
+    <tbody>
+        <tr>
+            <td style="width: 50%; text-align: center;"><strong>Multivariate Normal Diag</strong></td>
+            <td style="width: 50%; text-align: center;"><strong>Normal distribution</strong></td>
+        </tr>
+        <tr>
+            <td style="width: 50%; text-align: left;">The&nbsp;<strong>2-D</strong>&nbsp;array that we're passing into
+                the&nbsp;<code>MultivariateNormalDiag</code>&nbsp;is interpreted as a single realization of
+                the&nbsp;<strong>2-D</strong>&nbsp;<strong>random variable</strong>, and the distribution returns
+                the&nbsp;<strong>log probability</strong>&nbsp;of this realization.</td>
+            <td style="width: 50%;">In the case of the&nbsp;<strong>Normal distribution</strong>, the array is
+                interpreted as values for each of the random variables in the batch. The distribution then calculates
+                the&nbsp;<code>log probability</code>&nbsp;for each batch&nbsp;<strong>separately</strong>&nbsp;from
+                each other, and returns them both in a length 2 tensor.</td>
+        </tr>
+    </tbody>
+</table>
+
+### **Independent Distribution**
+
+The **Independent Distribution** gives us a way to absorb some or all of the **batch dimensions** into the `event_shape`.
+
+```python
+
+import tensorflow as tf
+import tensorflow_probability as tfp
+tfd = tfp.distributions
+
+batched_normal = tfd.Normal(loc=[-1., 0.5], scale=[1., 1.5])
+
+independent_normal = tfd.Independent(batched_normal, reinterpreted_batch_ndims=1)
+print(independent_normal)
+```
 
 ## :black_circle: **d) Sampling and log probs**
 
