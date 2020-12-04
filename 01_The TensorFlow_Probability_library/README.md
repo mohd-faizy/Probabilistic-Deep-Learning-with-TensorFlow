@@ -314,6 +314,10 @@ array([[0.7245038 , 0.02775155, 2.3153021 ],
        [0.9195015 , 0.20723073, 1.4882771 ]], dtype=float32)>
 ```
 
+<p align='center'>
+  <a href="#"><img src='https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/blob/main/Tensorflow_Dev_png/vert_div.gif?raw=true' alt="div"></a>
+</p>
+
 ---
 
 <strong> 
@@ -539,6 +543,10 @@ batched_mv_normal.log_prob([0., -1., 1.])
 
 > This section shows how `sample`, `batch`, and `event_shapes` are used in distribution objects. And By designing distribution objects in this way, the **TensorFlow probability library** can exploit the **Performance gains** from **Vectorizing Computations**
 
+<p align='center'>
+  <a href="#"><img src='https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/blob/main/Tensorflow_Dev_png/vert_div.gif?raw=true' alt="div"></a>
+</p>
+
 ---
 
 <strong> 
@@ -714,6 +722,10 @@ dist.log_prob(np.zeros((4, 5)))
 
 <tf.Tensor: shape=(2,), dtype=float32, numpy=array([-13.862944, -13.862944], dtype=float32)>
 ```
+
+<p align='center'>
+  <a href="#"><img src='https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/blob/main/Tensorflow_Dev_png/vert_div.gif?raw=true' alt="div"></a>
+</p>
 
 ---
 
@@ -948,6 +960,10 @@ dist.log_prob(tf.random.uniform((2, 1, 1, 4)))
 **Answer** `Tensor: shape=(2, 2)`
 
 > Using the above methods we can understand of how `sample_shape`, `batch_shape` and `event_shapes` behave, particularly when it comes to **Creating distribution objects** and using the `sample` or `log_prob` methods we can also apply the **broadcasting** to these methods or instantiating a distribution objects.
+
+<p align='center'>
+  <a href="#"><img src='https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/blob/main/Tensorflow_Dev_png/vert_div.gif?raw=true' alt="div"></a>
+</p>
 
 ---
 
