@@ -1,18 +1,18 @@
 ![author](https://img.shields.io/badge/author-mohd--faizy-red)
 ![made-with-Markdown](https://img.shields.io/badge/Made%20with-markdown-blue)
-![Language](https://img.shields.io/github/languages/top/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow)
+![Language](https://img.shields.io/github/languages/top/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow)
 ![Platform](https://img.shields.io/badge/platform-jupyter%20labs-blue)
 ![Maintained](https://img.shields.io/maintenance/yes/2020)
-![Last Commit](https://img.shields.io/github/last-commit/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow)
-[![GitHub issues](https://img.shields.io/github/issues/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow)](https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/issues)
+![Last Commit](https://img.shields.io/github/last-commit/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow)
+[![GitHub issues](https://img.shields.io/github/issues/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow)](https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/issues)
 [![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://opensource.com/resources/what-open-source)
-![Stars GitHub](https://img.shields.io/github/stars/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow)
-[![GitHub license](https://img.shields.io/github/license/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow)](https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/blob/master/LICENSE)
-![Size](https://img.shields.io/github/repo-size/mohd-faizy/Machine-Learning-Algorithms)
+![Stars GitHub](https://img.shields.io/github/stars/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow)
+[![GitHub license](https://img.shields.io/github/license/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow)](https://github.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow/blob/master/LICENSE)
+![Size](https://img.shields.io/github/repo-size/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow)
 
 # **Probabilistic Deep Learning with TensorFlow**
 
-<img src='https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/blob/main/Tensorflow_Dev_png/head.png'>
+<img src='https://github.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow/blob/main/Tensorflow_Dev_png/head.png'>
 
 > **Documentation**: [tfp_api_docs](https://www.tensorflow.org/probability/api_docs/python/tfp)
 
@@ -51,7 +51,7 @@ coeffs, linear_response, is_converged, num_iter = tfp.glm.fit(
 - Optimizers such as Nelder-Mead, BFGS, and SGLD
 
 <p align='center'>
-    <a href="https://youtu.be/BrwKURU-wpk" target="_blank"><img src="https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/blob/main/Tensorflow_Dev_png/tfp_dev_summit_ytd.jpg" height='350' width='600'></a>
+    <a href="https://youtu.be/BrwKURU-wpk" target="_blank"><img src="https://github.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow/blob/main/Tensorflow_Dev_png/tfp_dev_summit_ytd.jpg" height='350' width='600'></a>
 </p>
 
 > The TensorFlow Probability library provides a powerful set of tools, for statistical modeling, and makes it easy to extend our use of TensorFlow to probabilistic deep learning models. The TFP library, is part of the wider TensorFlow ecosystem, which contains a number of libraries and extensions for advanced and specialized use cases.
