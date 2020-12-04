@@ -687,6 +687,8 @@ dist = tfd.Independent(tfd.Bernoulli(probs=probs))
 dist.log_prob(np.zeros((4, 5)))
 ```
 
+#### Answer: `shape=(2,)`
+
 ```
 # Output
 
