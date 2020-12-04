@@ -175,6 +175,8 @@ _where:_
 
 <img src='https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/blob/main/Tensorflow_Dev_png/Probabilistic%20Deep%20Learning%20Map.png'>
 
+## My Notes
+
 <p align='left'>
   <a href="#"><img src='https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/blob/main/Tensorflow_Dev_png/my_notes.png?raw=true' width=150px height=100px alt="my_notes"></a>
 </p>
