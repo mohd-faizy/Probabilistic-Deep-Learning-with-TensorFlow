@@ -11,7 +11,7 @@
 ---
 
 <strong> 
-    <h2 align='left'>a) Univariate distributions</h2> 
+    <h2 align='center'>a) Univariate distributions</h2> 
 </strong>
 
 ---
@@ -321,7 +321,7 @@ array([[0.7245038 , 0.02775155, 2.3153021 ],
 ---
 
 <strong> 
-    <h2 align='left'>b) Multivariate distributions</h2> 
+    <h2 align='center'>b) Multivariate distributions</h2> 
 </strong>
 
 ---
@@ -550,7 +550,7 @@ batched_mv_normal.log_prob([0., -1., 1.])
 ---
 
 <strong> 
-    <h2 align='left'>c) The Independent distribution</h2> 
+    <h2 align='center'>c) The Independent distribution</h2> 
 </strong>
 
 ---
@@ -730,7 +730,7 @@ dist.log_prob(np.zeros((4, 5)))
 ---
 
 <strong> 
-    <h2 align='left'>d) Sampling and log probs</h2> 
+    <h2 align='center'>d) Sampling and log probs</h2> 
 </strong>
 
 ---
@@ -968,7 +968,7 @@ dist.log_prob(tf.random.uniform((2, 1, 1, 4)))
 ---
 
 <strong> 
-    <h2 align='left'>e) Trainable distributions</h2> 
+    <h2 align='center'>e) Trainable distributions</h2> 
 </strong>
 
 ---
