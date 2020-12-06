@@ -1,4 +1,4 @@
-![author](https://img.shields.io/badge/author-mohd--faizy-red)
+[![author](https://img.shields.io/badge/author-mohd--faizy-red)](https://github.com/mohd-faizy)
 ![made-with-Markdown](https://img.shields.io/badge/Made%20with-markdown-blue)
 ![Language](https://img.shields.io/github/languages/top/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow)
 ![Platform](https://img.shields.io/badge/platform-jupyter%20labs-blue)
