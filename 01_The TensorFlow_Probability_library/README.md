@@ -1,3 +1,6 @@
+![author](https://img.shields.io/badge/author-mohd--faizy-red)
+![made-with-Markdown](https://img.shields.io/badge/Made%20with-markdown-blue)
+
 <img src='https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/blob/main/Tensorflow_Dev_png/head.png'>
 
 ---
