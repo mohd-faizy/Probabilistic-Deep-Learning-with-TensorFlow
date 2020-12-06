@@ -1007,7 +1007,7 @@ tfd = tfp.distributions
 
 normal = tfd.Normal(loc=tf.Variable(0., name='loc'), scale=1.)
 
-def nll(x_train):
+def nll(x_train):  # Defining the negative log likelihood(nll)
     return -tf.reduce_mean(normal.log_prob(x_train))
 
 '''
@@ -1019,14 +1019,14 @@ def get_loss_and_grads(x_train):
     with tf.GradientTape() as tape:
         tape.watch(normal.trainable_variables)
         loss = nll(x_train)
-    grads = tape.Gradient(loss, normal.trainable_variables)
+    grads = tape.gradient(loss, normal.trainable_variables)
     return loss, grads
 
 optimizer = tf.keras.optimizers.SGD(learning_rate=0.05)
 
 for _ in range(num_steps):
     loss, grads = get_loss_and_grads(x_samples)
-    optimizer.apply_gradient(zip(grads, normal.trainable_variables))
+    optimizer.apply_gradients(zip(grads, normal.trainable_variables))
 ```
 
 - To compute the gradients, we set up a `tf.GradientTape` context and start with a **call** to `tape.watch` to specify the variables that we want to track in the operations that follow. Here, that's the trainable variables of our normal distribution.
