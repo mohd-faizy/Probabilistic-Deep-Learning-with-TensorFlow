@@ -1046,10 +1046,10 @@ for _ in range(num_steps):
 
 ### **In this Module we learned**
 
-> :heavy_check_mark: How to create different types of distribution objects using TensorFlow probability, including `univariates, multivariates, discrete`, and `continuous distributions`.
+:black_circle: How to create different types of distribution objects using TensorFlow probability, including **Univariates, Multivariates, discrete** and **Continuous distributions**.
 
-> :heavy_check_mark: we have seen the three core methods of these distributions by the `sample`, `prob`, and `log prob` methods.
+:black_circle: We have seen the **three core** methods of these distributions by the `sample`, `prob`, and `log prob` methods.
 
-> :heavy_check_mark: we have als seen how the `independent distribution` can be used to manipulate the `batch_shapes` and the `event_shapes`, and how `broadcasting` can be applied with the `prob` and `log_prob` methods.
+:black_circle: We have also seen how the `independent distribution` can be used to manipulate the `batch_shapes` and the `event_shapes`, and how `broadcasting` can be applied with the `prob` and `log_prob` methods.
 
-> :heavy_check_mark: Finally, how the parameters of these distributions can be learned in a training loop, similar to that of training loops for deep learning models in TensorFlow.
+:black*circle: And \_Finally*, how the parameters of these distributions can be learned in a training loop, similar to that of training loops for deep learning models in TensorFlow.
