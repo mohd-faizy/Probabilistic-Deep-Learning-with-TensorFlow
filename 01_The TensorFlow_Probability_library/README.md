@@ -1,7 +1,7 @@
 [![author](https://img.shields.io/badge/author-mohd--faizy-red)](https://github.com/mohd-faizy)
 ![made-with-Markdown](https://img.shields.io/badge/Made%20with-markdown-blue)
 
-<img src='https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/blob/main/Tensorflow_Dev_png/head.png'>
+<img src='https://github.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow/blob/main/Tensorflow_Dev_png/head.png?raw=true'>
 
 ---
 
@@ -41,7 +41,7 @@ A random variable has a **Probability distribution** that represents the **likel
 
 ---
 
-:chart_with_upwards_trend: **Distribution objects** are vital building blocks to build **Probabilistic deep learning Models** as these objects capture the essential operations on probability distributions that we're going to need to build these models.
+:chart_with_upwards_trend: **Distribution Objects:** They are vital building blocks to build **Probabilistic deep learning Models** as these objects capture the essential operations on probability distributions that we're going to need to build these models.
 
 :bar_chart: In mathematics, a **Univariate object** is an expression, equation, function or polynomial involving only one variable.
 
@@ -599,6 +599,12 @@ batched_mv_normal.log_prob([0., -1., 1.])
 </strong>
 
 ---
+
+In **Probability theory & statistics**, a collection of random variables is **independent and identically distributed** if each random variable has the `same probability distribution` as the others and all are **Mutually independent**.This property is usually abbreviated as **IID**
+
+In **Machine learning** theory, **IID** assumption is often made for training datasets to imply that all samples stem from the same generative process and that the generative process is assumed to have no memory of past generated samples.
+
+The **IID** assumption is important in the classical form of the **central limit theorem**, which states that the probability distribution of the sum (or average) of **IID** variables with finite variance approaches a **normal distribution**.
 
 When we compute `log_probs` of an `input_event`, -- distribution calculates the **log probability** of _each event in the batch of distributions_ and _returns a single number for each distribution in the batch_.
 
