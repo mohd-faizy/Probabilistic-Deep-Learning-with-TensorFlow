@@ -11,6 +11,28 @@
 
 ---
 
+### What Is a Random Variable:question::question::question:
+
+A **random variable** is a `Numerical Description` of the outcome of a **statistical experiment**. These are the variable whose value is unknown or a function that assigns values to each of an experiment's outcomes.
+
+In probability and statistics, random variables are used to quantify outcomes of a random occurrence, and therefore, can take on many values.
+
+> A random variable is different from an **algebraic variable**. The variable in an algebraic equation is an unknown value that can be calculated.
+
+**Types of Random Variables:**
+
+A random variable can be either discrete or continuous.
+
+- **Discrete random variables** take on a countable number of distinct values.
+
+- **Continuous random variables** can represent any value within a specified range or interval and can take on an infinite number of possible values.
+
+A random variable has a **Probability distribution** that represents the **likelihood** that any of the possible values would occur. Let’s say that the random variable, **X**, is the number on the top face of a **die** when it is rolled once. The possible values for **X** will thus be `1, 2, 3, 4, 5, and 6`. The probability of each of these values is `1/6` as they are all equally likely to be the value of **X**.
+
+<p align='center'>
+  <a href="#"><img src='https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/blob/main/Tensorflow_Dev_png/vert_div.gif?raw=true' height='200' width='200' alt="div"></a>
+</p>
+
 ---
 
 <strong> 
@@ -19,9 +41,21 @@
 
 ---
 
-These distributions have an `empty_event` shape, indicating that they are distributions for a **single random variable**.
+:chart_with_upwards_trend: **Distribution objects** are vital building blocks to build **Probabilistic deep learning Models** as these objects capture the essential operations on probability distributions that we're going to need to build these models.
 
-**Distribution objects** are vital building blocks to build **Probabilistic deep learning Models** as these objects capture the essential operations on probability distributions that we're going to need to build these models.
+:bar_chart: In mathematics, a **Univariate object** is an expression, equation, function or polynomial involving only one variable.
+
+:chart*with_downwards_trend: In statistics, a **Univariate distribution** is a \_probability distribution* of only **one random variable**.
+
+One of the simplest examples of a **discrete univariate distribution** is the **discrete uniform distribution**, where all elements of a finite set are equally likely. It is the probability model for the outcomes of tossing a fair coin, rolling a fair die, etc.
+
+The univariate continuous uniform distribution on an interval `[a, b]` has the property that all sub-intervals of the same length are equally likely.
+
+<p align='center'>
+  <a href="#"><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Uniform_distribution.svg/330px-Uniform_distribution.svg.png' height='200' width='300' alt="div"></a>
+</p>
+
+These distributions have an `empty_event` shape, indicating that they are distributions for a **single random variable**.
 
 ### :heavy_check_mark: **Defining our first univariate distribution object**
 
@@ -328,6 +362,14 @@ array([[0.7245038 , 0.02775155, 2.3153021 ],
 </strong>
 
 ---
+
+The **Multivariate distribution** has _two_ or more **random variables**
+
+Given random variables **X, Y** that are defined on a **probability space**, the **joint probability distribution** for **X, Y** is a probability distribution that gives the probability that each of **X, Y** falls in any particular range or discrete set of values specified for that variable. In the case of only two random variables, this is called a **Bivariate distribution**, but the concept generalizes to any number of random variables, giving a Multivariate distribution.
+
+<p align='center'>
+  <a href="#"><img src='https://www.researchgate.net/profile/Raghavendra_Selvan2/publication/320182941/figure/fig1/AS:631626589544513@1527602922664/Illustration-of-a-bivariate-Gaussian-distribution-The-marginal-and-joint-probability_W640.jpg' alt="div"></a>
+</p>
 
 ### :heavy_check_mark: **Multivariate Gaussian Distribution**
 
