@@ -185,7 +185,7 @@ _where:_
 
 :two: [:heavy_check_mark: **Probabilistic layers and Bayesian neural networks**](https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/tree/main/02_Probabilistic_layers_and_Bayesian_Neural_Networks)
 
-:three: [:heavy_check_mark: **Probabilistic layers and Bayesian neural networks**](https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/tree/main/03_Bijectors_and_Normalising_Flows)
+:three: [:heavy_check_mark: **Bijectors and Normalising Flows**](https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/tree/main/03_Bijectors_and_Normalising_Flows)
 
 :four: [:heavy_check_mark: **Variational autoencoders**](https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/tree/main/04_Variational_Autoencoders)
 
