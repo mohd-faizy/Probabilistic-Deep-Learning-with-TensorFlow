@@ -30,7 +30,7 @@ A random variable can be either discrete or continuous.
 A random variable has a **Probability distribution** that represents the **likelihood** that any of the possible values would occur. Let’s say that the random variable, **X**, is the number on the top face of a **die** when it is rolled once. The possible values for **X** will thus be `1, 2, 3, 4, 5, and 6`. The probability of each of these values is `1/6` as they are all equally likely to be the value of **X**.
 
 <p align='center'>
-  <a href="#"><img src='https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/blob/main/Tensorflow_Dev_png/vert_div.gif?raw=true' height='200' width='200' alt="div"></a>
+  <a href="#"><img src='https://tymsai.netlify.app/resource/1.gif' height='200' width=100% alt="div"></a>
 </p>
 
 ---
@@ -352,7 +352,7 @@ array([[0.7245038 , 0.02775155, 2.3153021 ],
 ```
 
 <p align='center'>
-  <a href="#"><img src='https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/blob/main/Tensorflow_Dev_png/vert_div.gif?raw=true' height='200' width='200' alt="div"></a>
+  <a href="#"><img src='https://tymsai.netlify.app/resource/1.gif' height='200' width=100% alt="div"></a>
 </p>
 
 ---
@@ -589,7 +589,7 @@ batched_mv_normal.log_prob([0., -1., 1.])
 > This section shows how `sample`, `batch`, and `event_shapes` are used in distribution objects. And By designing distribution objects in this way, the **TensorFlow probability library** can exploit the **Performance gains** from **Vectorizing Computations**
 
 <p align='center'>
-  <a href="#"><img src='https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/blob/main/Tensorflow_Dev_png/vert_div.gif?raw=true' height='200' width='200' alt="div"></a>
+  <a href="#"><img src='https://tymsai.netlify.app/resource/1.gif' height='200' width=100% alt="div"></a>
 </p>
 
 ---
@@ -775,7 +775,7 @@ dist.log_prob(np.zeros((4, 5)))
 ```
 
 <p align='center'>
-  <a href="#"><img src='https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/blob/main/Tensorflow_Dev_png/vert_div.gif?raw=true' height='200' width='200' alt="div"></a>
+  <a href="#"><img src='https://tymsai.netlify.app/resource/1.gif' height='200' width=100% alt="div"></a>
 </p>
 
 ---
@@ -1013,7 +1013,7 @@ dist.log_prob(tf.random.uniform((2, 1, 1, 4)))
 > Using the above methods we can understand of how `sample_shape`, `batch_shape` and `event_shapes` behave, particularly when it comes to **Creating distribution objects** and using the `sample` or `log_prob` methods we can also apply the **broadcasting** to these methods or instantiating a distribution objects.
 
 <p align='center'>
-  <a href="#"><img src='https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/blob/main/Tensorflow_Dev_png/vert_div.gif?raw=true' height='200' width='200' alt="div"></a>
+  <a href="#"><img src='https://tymsai.netlify.app/resource/1.gif' height='200' width=100% alt="div"></a>
 </p>
 
 ---
@@ -1101,3 +1101,15 @@ for _ in range(num_steps):
 :black_circle: We have also seen how the `independent distribution` can be used to manipulate the `batch_shapes` and the `event_shapes`, and how `broadcasting` can be applied with the `prob` and `log_prob` methods.
 
 :blackcircle: And \_Finally\*, how the parameters of these distributions can be learned in a training loop, similar to that of training loops for deep learning models in TensorFlow.
+
+
+### $\color{skyblue}{\textbf{Connect with me:}}$
+
+
+[<img align="left" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" width="32px"/>][twitter]
+[<img align="left" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" width="32px"/>][linkedin]
+[<img align="left" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg" width="32px"/>][StackExchange AI]
+
+[twitter]: https://twitter.com/F4izy
+[linkedin]: https://www.linkedin.com/in/mohd-faizy/
+[StackExchange AI]: https://ai.stackexchange.com/users/36737/cypher

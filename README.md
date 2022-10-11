@@ -11,7 +11,6 @@
 [![contributions welcome](https://img.shields.io/static/v1.svg?label=Contributions&message=Welcome&color=0059b3&style=flat-square)](https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow)
 ![Size](https://img.shields.io/github/repo-size/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow)
 
-
 # **Probabilistic Deep Learning with TensorFlow**
 
 <img src='https://github.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow/blob/main/Tensorflow_Dev_png/head.png'>
@@ -86,13 +85,23 @@ Once you know that your distribution is binomial, you can apply the binomial dis
 
 In general, if the random variable `X` follows the binomial distribution with parameters `n ∈ ℕ` and `p ∈ [0, 1]`, we write `X ~ B(n, p)`. The probability of getting exactly `k` successes in `n` independent Bernoulli trials is given by the probability mass function:
 
-<img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/b872c2c7bfaa26b16e8a82beaf72061b48daaf8e">
+$$
+f(k, n, p)=\operatorname{Pr}(k ; n, p)=\operatorname{Pr}(X=k)=\left(\begin{array}{l}
+n \\
+k
+\end{array}\right) p^k(1-p)^{n-k}
+$$
 
-for `k = 0, 1, 2, ..., n,` where
+for $k = 0, 1, 2, ..., n,$ where
 
-<img src='https://wikimedia.org/api/rest_v1/media/math/render/svg/d33401621fb832dd2f9783e80a906d562f669008'>
+$$
+\left(\begin{array}{l}
+n \\
+k
+\end{array}\right)=\frac{n !}{k !(n-k) !}
+$$
 
-is the binomial coefficient, hence the name of the distribution. The formula can be understood as follows: k successes occur with probability <a href="https://www.codecogs.com/eqnedit.php?latex=p^k" target="_blank"><img src="https://latex.codecogs.com/gif.latex?p^k" title="p^k" /></a> and `n − k` failures occur with probability `(1 − p)^(n − k)`.
+is the binomial coefficient, hence the name of the distribution. The formula can be understood as follows: $k$ successes occur with probability $p^k$ and $(n − k)$ failures occur with probability $(1 − p)^{n − k}$.
 
 ### :large_blue_diamond: b) [Poisson Distribution:](https://en.wikipedia.org/wiki/Poisson_distribution)
 
@@ -108,7 +117,9 @@ The Poisson distribution is popular for modeling the number of times an event oc
 
 A discrete random variable `X` is said to have a Poisson distribution with parameter `λ > 0` if for `k = 0, 1, 2, ...,` the probability mass function of X is given by
 
-<img src='https://wikimedia.org/api/rest_v1/media/math/render/svg/c22cb4461e100a6db5f815de1f44b1747f160048'>
+$$
+f(k ; \lambda)=\operatorname{Pr}(X=k)=\frac{\lambda^k e^{-\lambda}}{k !}
+$$
 
 where
 
@@ -128,11 +139,15 @@ The distribution in which all outcomes are equally likely. for example: A coin a
 
 #### The probability density function (PDF) of the continuous uniform distribution is:
 
-<img src='https://wikimedia.org/api/rest_v1/media/math/render/svg/b701524dbfea89ed90316dbc48c5b62954d7411c'>
+$$
+f(x)= \begin{cases}\frac{1}{b-a} & \text { for } a \leq x \leq b \\ 0 & \text { for } x<a \text { or } x>b\end{cases}
+$$
 
 #### The cumulative distribution function (CDF) is:
 
-<img src='https://wikimedia.org/api/rest_v1/media/math/render/svg/e5c664c7665277eea8f74575f4650fa933f28dcb'>
+$$
+F(x)= \begin{cases}0 & \text { for } x<a \\ \frac{x-a}{b-a} & \text { for } a \leq x \leq b \\ 1 & \text { for } x>b\end{cases}
+$$
 
 ### :large_blue_diamond: d) [Gaussian Distribution:](https://en.wikipedia.org/wiki/Normal_distribution)
 
@@ -140,15 +155,17 @@ The **Gaussian Distribution**, is a probability distribution that is **Symmetric
 
 > Normal distributions are important in statistics and are often used in the natural and social sciences to represent real-valued random variables whose distributions are not known.
 
-<img src='https://www.gstatic.com/education/formulas/images_long_sheet/en/normal_distribution.svg'>
+$$
+f(x)=\frac{1}{\sigma \sqrt{2 \pi}} e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2}
+$$
 
-_where_
+where
 
-<img src='https://www.gstatic.com/education/formulas/images_long_sheet/en/normal_distribution_normal_distribution_var_1.svg'> = Probability density function
-
-<img src='https://www.gstatic.com/education/formulas/images_long_sheet/en/normal_distribution_normal_distribution_var_2.svg'> = Standard deviation
-
-<img src='https://www.gstatic.com/education/formulas/images_long_sheet/en/normal_distribution_normal_distribution_var_3.svg'> = Mean
+$
+f(x)=\text{Probability density function}\\
+\sigma=\text{Standard deviation}\\
+\mu=\text { Mean }
+$
 
 Their **Importance** is partly due to the **Central Limit Theorem**. It states that, under some conditions, the average of many samples (observations) of a random variable with finite mean and variance is itself a random variable—whose distribution converges to a normal distribution as the number of samples increases.
 
@@ -164,23 +181,25 @@ To predict the amount of waiting time until the next event (i.e., success, failu
 - The amount of time until the hardware on AWS EC2 fails (failure).
 - The amount of time you need to wait until the bus arrives (arrival).
 
-<img src='https://www.gstatic.com/education/formulas/images_long_sheet/en/exponential_distribution.svg'>
+$$
+f(x ; \lambda)= \begin{cases}\lambda e^{-\lambda x} & x \geq 0 \\ 0 & x<0\end{cases}
+$$
 
-_where:_
+where:
 
-- <img src='https://www.gstatic.com/education/formulas/images_long_sheet/en/exponential_distribution_exponential_distribution_var_1.svg'> = Probability Density Function
-
-- `λ` = Rate parameter
-- `x` = Random variable
+$f(x ; \lambda)= \text{Probability Density Function}\\
+\lambda=\text{Rate parameter}\\
+\mathrm{x} =\text{Random variable}\\
+$
 
 ## **Learning Path**
 
 <img src='https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/blob/main/Tensorflow_Dev_png/Probabilistic%20Deep%20Learning%20Map.png'>
 
-## My Notes
+## Notes
 
 <p align='left'>
-  <a href="#"><img src='https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/blob/main/Tensorflow_Dev_png/my_notes.png?raw=true' width=150px height=100px alt="my_notes"></a>
+  <a href="#"><img src='https://cdn-icons-png.flaticon.com/512/564/564445.png' width=70px height=70px alt="my_notes"></a>
 </p>
 
 :one: [:heavy_check_mark: **The TensorFlow Probability library**](https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/tree/main/01_The%20TensorFlow_Probability_library)
@@ -195,7 +214,7 @@ _where:_
 
 ## Other Resources
 
-- YouTube [StatQuest](https://www.youtube.com/channel/UCtYLUTtgS3k1Fg4y5tAhLbw)
+- [StatQuest](https://www.youtube.com/channel/UCtYLUTtgS3k1Fg4y5tAhLbw)
 - [Probability Cheatsheet A](https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/blob/main/01_Probability_Cheatsheet_a.pdf)
 - [Probability Cheatsheet B](https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/blob/main/02_Probability_Cheatsheet_b.pdf)
 
