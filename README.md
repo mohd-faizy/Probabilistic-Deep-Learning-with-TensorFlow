@@ -164,11 +164,11 @@ $$
 
 where
 
-$
-f(x)=\text{Probability density function}\\
-\sigma=\text{Standard deviation}\\
-\mu=\text { Mean }
-$
+$f(x)=\text{Probability density function}$
+
+$\sigma=\text{Standard deviation}$
+
+$\mu=\text{Mean}$
 
 Their **Importance** is partly due to the **Central Limit Theorem**. It states that, under some conditions, the average of many samples (observations) of a random variable with finite mean and variance is itself a random variable—whose distribution converges to a normal distribution as the number of samples increases.
 
