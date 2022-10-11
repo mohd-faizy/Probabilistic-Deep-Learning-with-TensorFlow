@@ -129,7 +129,10 @@ where
 
 The positive real number `λ` is equal to the expected value of `X` and also to its variance.
 
-<img src='https://wikimedia.org/api/rest_v1/media/math/render/svg/2debd3f9adf97c8af4919aa69ed4a7121b47a737'>
+
+$$
+\lambda=E(X)=Var(X)
+$$
 
 The Poisson distribution can be applied to systems with a large number of possible events, each of which is rare. The number of such events that occur during a fixed time interval is, under the right circumstances, a random number with a Poisson distribution.
 

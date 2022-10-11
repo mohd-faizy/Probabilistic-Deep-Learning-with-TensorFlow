@@ -1108,8 +1108,8 @@ for _ in range(num_steps):
 
 [<img align="left" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/twitter.svg" width="32px"/>][twitter]
 [<img align="left" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" width="32px"/>][linkedin]
-[<img align="left" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg" width="32px"/>][StackExchange AI]
+[<img align="left" src="https://raw.githubusercontent.com/iconic/open-iconic/master/svg/globe.svg" width="32px"/>][Portfolio]
 
 [twitter]: https://twitter.com/F4izy
 [linkedin]: https://www.linkedin.com/in/mohd-faizy/
-[StackExchange AI]: https://ai.stackexchange.com/users/36737/cypher
+[Portfolio]: https://mohdfaizy.com/
