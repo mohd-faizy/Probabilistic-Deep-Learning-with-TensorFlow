@@ -216,6 +216,11 @@ $x =\text{Random variable}$
 
 :five: [:heavy_check_mark: **Capstone Project**](https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/tree/main/05_Capstone_Project)
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow&type=Date)](https://star-history.com/#mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow&Date)
+
+
 ## Other Resources
 
 - [StatQuest](https://www.youtube.com/channel/UCtYLUTtgS3k1Fg4y5tAhLbw)
