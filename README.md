@@ -253,16 +253,6 @@ $$
 - [Probability Cheatsheet A](https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/blob/main/01_Probability_Cheatsheet_a.pdf)
 - [Probability Cheatsheet B](https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/blob/main/02_Probability_Cheatsheet_b.pdf)
 
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow&type=Date)](https://star-history.com/#mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow&Date)
-
-
-<p align='center'>
-  <a href="#"><img src='https://tymsai.netlify.app/resource/1.gif' height='10' width=100% alt="div"></a>
-</p>
-
 ### $\color{skyblue}{\textbf{Connect with me:}}$
 
 [<img align="left" src="https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/twitter_circle-512.png" width="32px"/>][twitter]
