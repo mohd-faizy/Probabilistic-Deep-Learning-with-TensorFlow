@@ -74,11 +74,7 @@ coeffs, linear_response, is_converged, num_iter = tfp.glm.fit(
 | **Use Cases**                | Bayesian neural networks, uncertainty estimation, statistical analysis. | Supervised/unsupervised learning, reinforcement learning, deep learning. |
 | **Target Audience**          | Statisticians, researchers, and Bayesian modelers.               | Machine learning practitioners and data scientists.        |
 
----
 
-🎯 **Pro Tip:** Use **TensorFlow Probability** when your problem involves uncertainty, probabilistic reasoning, or Bayesian inference. For standard machine learning tasks like image classification or NLP, **TensorFlow Core** is sufficient.
-
----
 
 ## 🌟 Key Probability Distributions You Should Know
 
@@ -224,9 +220,6 @@ $$
 | Uniform           | Equal Likelihood of Outcomes    | $f(x) = \frac{1}{b-a}$                                    | Random Sampling, Initialization                |
 | Gaussian (Normal) | Symmetric Data Distribution     | $f(x) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}$ | Probabilistic Models, Central Limit Theorem    |
 | Exponential       | Time Until Next Event           | $f(x; \lambda) = \lambda e^{-\lambda x}$                   | Survival Analysis, Sequential Event Modeling   |
-
-🎯 **Pro Tip:** Mastering these distributions helps unlock the full potential of TensorFlow Probability, giving you a robust toolkit for solving real-world uncertainty problems.
-
 
 
 ## **Path**
