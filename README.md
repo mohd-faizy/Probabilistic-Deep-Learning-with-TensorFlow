@@ -2,7 +2,7 @@
 ![made-with-Markdown](https://img.shields.io/badge/Made%20with-markdown-blue)
 ![Language](https://img.shields.io/github/languages/top/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow)
 ![Platform](https://img.shields.io/badge/platform-jupyter%20labs-blue)
-![Maintained](https://img.shields.io/maintenance/yes/2022)
+![Maintained](https://img.shields.io/maintenance/yes/2024)
 ![Last Commit](https://img.shields.io/github/last-commit/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow)
 [![GitHub issues](https://img.shields.io/github/issues/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow)](https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/issues)
 [![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://opensource.com/resources/what-open-source)
@@ -17,7 +17,7 @@
 
 > **Documentation**: [tfp_api_docs](https://www.tensorflow.org/probability/api_docs/python/tfp)
 
-## **Why is probabilistic programming important for deep learning?**
+## ⁉️**Why is probabilistic programming important for deep learning?**
 
 - The use of statistics to overcome uncertainty is one of the pillars of a large segment of the machine learning. Probabilistic reasoning has long been considered one of the foundations of inference algorithms and is represented is all major machine learning frameworks and platforms.
 - Usually the classifications that you have arise and the predictions that we make, don't fall into a single category, or they fall into a category with some confidence level. Incorporating those probabilities is incredibly important for machine learning projects in the real world. Usually there is no single answer. There's this wide spectrum of answers that fall into some common distribution pattern.
@@ -57,148 +57,181 @@ coeffs, linear_response, is_converged, num_iter = tfp.glm.fit(
 
 > The TensorFlow Probability library provides a powerful set of tools, for statistical modeling, and makes it easy to extend our use of TensorFlow to probabilistic deep learning models. The TFP library, is part of the wider TensorFlow ecosystem, which contains a number of libraries and extensions for advanced and specialized use cases.
 
-## Here are the main Distributions to have in mind
 
-### :large_blue_diamond: a) [Binomial Distribution:](https://en.wikipedia.org/wiki/Binomial_distribution)
+---
 
-**What is a Binomial Distribution?**
+## 🎯**TensorFlow Probability (TFP) vs TensorFlow Core (TF)**  
 
-A binomial distribution can be thought of as simply the probability of a **SUCCESS** or **FAILURE** outcome in an experiment or survey that is repeated multiple times. The binomial is a type of distribution that has two possible outcomes (the prefix “bi” means two, or twice). For example, a coin toss has only two possible outcomes: heads or tails and taking a test could have two possible outcomes: pass or fail.
-what is a binomial distribution
+| **Feature**                  | **TensorFlow Probability (TFP)**                                   | **TensorFlow Core (TF)**                                    |
+|------------------------------|--------------------------------------------------------------------|------------------------------------------------------------|
+| **Purpose**                  | Designed for probabilistic modeling and statistical inference.    | General-purpose framework for machine learning and deep learning. |
+| **Focus**                    | Handles uncertainty, distributions, and Bayesian reasoning.       | Builds and trains deterministic models like neural networks. |
+| **Key Components**           | Probability distributions, Bayesian layers, MCMC, variational inference. | Layers, optimizers, losses, and metrics for supervised/unsupervised learning. |
+| **Distributions**            | Extensive support for probability distributions (e.g., Normal, Poisson). | Limited to simple random number generation.                |
+| **Modeling Style**           | Probabilistic models with uncertainty quantification.             | Deterministic models for tasks like classification, regression, etc. |
+| **Monte Carlo Support**      | Built-in tools for Monte Carlo methods and variational inference. | No dedicated Monte Carlo functionality.                    |
+| **Integration**              | Seamlessly integrates with TensorFlow Core for hybrid models.    | Core framework for defining and optimizing computation graphs. |
+| **Use Cases**                | Bayesian neural networks, uncertainty estimation, statistical analysis. | Supervised/unsupervised learning, reinforcement learning, deep learning. |
+| **Target Audience**          | Statisticians, researchers, and Bayesian modelers.               | Machine learning practitioners and data scientists.        |
 
-> A Binomial Distribution shows either **(S)uccess** or **(F)ailure.**
->
-> - The **first variable** in the binomial formula, `n`, stands for the number of times the experiment runs.
-> - The **second variable**, `p`, represents the probability of one specific outcome.
+---
 
-#### **Criteria**
+🎯 **Pro Tip:** Use **TensorFlow Probability** when your problem involves uncertainty, probabilistic reasoning, or Bayesian inference. For standard machine learning tasks like image classification or NLP, **TensorFlow Core** is sufficient.
 
-**Binomial distributions must also meet the following three criteria:**
+---
 
-1. The number of observations or trials is fixed. In other words, you can only figure out the probability of something happening if you do it a certain number of times. This is common sense—if you toss a coin once, your probability of getting a tails is 50%. If you toss a coin a 20 times, your probability of getting a tails is very, very close to 100%.
+## 🌟 Key Probability Distributions You Should Know
 
-2. Each observation or trial is independent. In other words, none of your trials have an effect on the probability of the next trial.
+### 📌 Why Are These Distributions Important in TensorFlow Probability (TFP)?  
 
-3. The probability of success (tails, heads, fail or pass) is exactly the same from one trial to another.
+Understanding probability distributions is the foundation of modeling uncertainty in machine learning. TensorFlow Probability (TFP) provides tools to work with these distributions, enabling you to build probabilistic models, perform Bayesian inference, and generate realistic simulations. These distributions help you solve real-world problems like predicting outcomes, modeling uncertainties, and analyzing rare events.
 
-Once you know that your distribution is binomial, you can apply the binomial distribution formula to calculate the probability.A Binomial Distribution shows either (S)uccess or (F)ailure.
+---
 
-In general, if the random variable `X` follows the binomial distribution with parameters `n ∈ ℕ` and `p ∈ [0, 1]`, we write `X ~ B(n, p)`. The probability of getting exactly `k` successes in `n` independent Bernoulli trials is given by the probability mass function:
+### 🔷 a) [Binomial Distribution](https://en.wikipedia.org/wiki/Binomial_distribution)  
+
+#### **What is it?**  
+
+A **Binomial Distribution** describes the probability of **success** or **failure** outcomes in a repeated experiment (e.g., coin flips, test results). It’s perfect for scenarios with two possible outcomes.
+
+📝 **Key Features:**  
+
+- **Two Outcomes:** Success (S) or Failure (F).  
+- **Fixed Trials (`n`)**: The number of times the experiment is repeated.  
+- **Probability (`p`)**: The likelihood of one specific outcome.  
+
+#### **Why It's Useful in TFP:**  
+
+Binomial distribution helps model classification problems or situations involving yes/no outcomes. Example: Predicting whether a machine fails in `n` trials.
+
+#### Formula  
+
+The probability of getting exactly `k` successes in `n` trials is:  
+$$
+f(k; n, p) = \binom{n}{k} p^k (1 - p)^{n-k}
+$$  
+
+---
+
+### 🔷 b) [Poisson Distribution](https://en.wikipedia.org/wiki/Poisson_distribution)  
+
+#### **What is it?**  
+
+The **Poisson Distribution** predicts how often a rare event occurs over a specific time or space interval. For example, how many customers arrive at a store in an hour.
+
+📝 **Key Features:**  
+
+- Models **rare events** in a large population.  
+- Events are **independent** and occur at a constant rate.  
+
+#### **Why It's Useful in TFP:**  
+
+Poisson distribution is used in time-series data, event modeling, or predicting rare occurrences. Example: Modeling customer arrivals or system failures.
+
+#### Formula  
 
 $$
-f(k, n, p)=\operatorname{Pr}(k ; n, p)=\operatorname{Pr}(X=k)=\left(\begin{array}{l}
-n \\
-k
-\end{array}\right) p^k(1-p)^{n-k}
+f(k; \lambda) = \frac{\lambda^k e^{-\lambda}}{k!}
+$$  
+Here, `λ` (lambda) is the average number of events in a given interval.
+
+---
+
+### 🔷 c) [Uniform Distribution](https://en.wikipedia.org/wiki/Continuous_uniform_distribution)  
+
+#### **What is it?**  
+
+A **Uniform Distribution** is where all outcomes are equally likely. Example: Rolling a fair dice or tossing a coin.
+
+📝 **Key Features:**  
+
+- All values between `a` and `b` have the **same probability**.  
+- Simple yet foundational for simulations and random sampling.  
+
+#### **Why It's Useful in TFP:**  
+
+Uniform distribution is critical for generating random variables, initializing weights in neural networks, and performing Monte Carlo simulations.
+
+#### Formula  
+
+Probability density function (PDF):  
 $$
+f(x) =
+\begin{cases}
+\frac{1}{b-a} & a \leq x \leq b \\
+0 & \text{otherwise}
+\end{cases}
+$$  
 
-for $k = 0, 1, 2, ..., n,$ where
+---
 
-$$
-\left(\begin{array}{l}
-n \\
-k
-\end{array}\right)=\frac{n !}{k !(n-k) !}
-$$
+### 🔷 d) [Gaussian (Normal) Distribution](https://en.wikipedia.org/wiki/Normal_distribution)  
 
-is the binomial coefficient, hence the name of the distribution. The formula can be understood as follows: $k$ successes occur with probability $p^k$ and $(n − k)$ failures occur with probability $(1 − p)^{n − k}$.
+#### **What is it?**  
 
-### :large_blue_diamond: b) [Poisson Distribution:](https://en.wikipedia.org/wiki/Poisson_distribution)
+The **Gaussian Distribution** (or Normal Distribution) is the famous bell curve, where most values cluster around the mean, and the probability tapers off symmetrically on both sides.
 
-Poisson distribution is a statistical distribution that shows how many times an event is likely to occur within a specified period of time. It is used for independent events which occur at a constant rate within a given interval of time.
+📝 **Key Features:**  
 
-> The Poisson distribution is used to describe the distribution of rare events in a large population. For example, at any particular time, there is a certain probability that a particular cell within a large population of cells will acquire a mutation. Mutation acquisition is a rare event.
+- Defined by **mean (μ)** and **standard deviation (σ)**.  
+- Forms the basis of the **Central Limit Theorem**.  
 
-#### Characteristics of a Poisson Distribution
+#### **Why It's Useful in TFP:**  
 
-The probability that an event occurs in a given time, distance, area, or volume is the same. Each event is independent of all other events. For example, the number of people who arrive in the first hour is independent of the number who arrive in any other hour.
+Gaussian distributions are everywhere in machine learning, from modeling errors to designing probabilistic models. They are essential for understanding uncertainty in predictions.  
 
-The Poisson distribution is popular for modeling the number of times an event occurs in an interval of time or space.
-
-A discrete random variable `X` is said to have a Poisson distribution with parameter `λ > 0` if for `k = 0, 1, 2, ...,` the probability mass function of X is given by
-
-$$
-f(k ; \lambda)=\operatorname{Pr}(X=k)=\frac{\lambda^k e^{-\lambda}}{k !}
-$$
-
-where
-
-- `e` is Euler's number `(e = 2.71828...)`
-- `k` is the number of occurrences
-- `k!` is the factorial of `k.`
-
-The positive real number `λ` is equal to the expected value of `X` and also to its variance.
-
-
-$$
-\lambda=E(X)=Var(X)
-$$
-
-The Poisson distribution can be applied to systems with a large number of possible events, each of which is rare. The number of such events that occur during a fixed time interval is, under the right circumstances, a random number with a Poisson distribution.
-
-### :large_blue_diamond: c) [Uniform Distribution:](https://en.wikipedia.org/wiki/Continuous_uniform_distribution)
-
-The distribution in which all outcomes are equally likely. for example: A coin also has a uniform distribution because the probability of getting either heads or tails in a coin toss is the same.
-
-#### The probability density function (PDF) of the continuous uniform distribution is:
+#### Formula  
 
 $$
-f(x)= \begin{cases}\frac{1}{b-a} & \text { for } a \leq x \leq b \\ 0 & \text { for } x<a \text { or } x>b\end{cases}
-$$
+f(x) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{1}{2} \left(\frac{x-\mu}{\sigma}\right)^2}
+$$  
 
-#### The cumulative distribution function (CDF) is:
+---
 
-$$
-F(x)= \begin{cases}0 & \text { for } x<a \\ \frac{x-a}{b-a} & \text { for } a \leq x \leq b \\ 1 & \text { for } x>b\end{cases}
-$$
+### 🔷 e) [Exponential Distribution](https://towardsdatascience.com/what-is-exponential-distribution-7bdd08590e2a)  
 
-### :large_blue_diamond: d) [Gaussian Distribution:](https://en.wikipedia.org/wiki/Normal_distribution)
+#### **What is it?**  
 
-The **Gaussian Distribution**, is a probability distribution that is **Symmetric** about the mean, showing that data near the mean are more frequent in occurrence than data far from the mean. In graph form, normal distribution will appear as a **bell curve**.
+The **Exponential Distribution** models the time until an event occurs. Example: How long until a server crashes, or the time between customer arrivals.
 
-> Normal distributions are important in statistics and are often used in the natural and social sciences to represent real-valued random variables whose distributions are not known.
+📝 **Key Features:**  
 
-$$
-f(x)=\frac{1}{\sigma \sqrt{2 \pi}} e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2}
-$$
+- Describes the **waiting time** for events.  
+- Often used in reliability engineering and queueing theory.  
 
-where
+#### **Why It's Useful in TFP:**  
 
-$f(x)=\text{Probability density function}$
+Exponential distribution helps in survival analysis and modeling waiting times in sequential processes. Example: Predicting downtime of a machine or arrival rates in traffic.  
 
-$\sigma=\text{Standard deviation}$
-
-$\mu=\text{Mean}$
-
-Their **Importance** is partly due to the **Central Limit Theorem**. It states that, under some conditions, the average of many samples (observations) of a random variable with finite mean and variance is itself a random variable—whose distribution converges to a normal distribution as the number of samples increases.
-
-### :large_blue_diamond: e) [Exponential Distribution:](https://towardsdatascience.com/what-is-exponential-distribution-7bdd08590e2a)
-
-#### Why did we have to invent Exponential Distribution?
-
-To predict the amount of waiting time until the next event (i.e., success, failure, arrival, etc.).
-
-**\_For example, we want to predict the following:**
-
-- The amount of time until the customer finishes browsing and actually purchases something in your store (success).
-- The amount of time until the hardware on AWS EC2 fails (failure).
-- The amount of time you need to wait until the bus arrives (arrival).
+#### Formula  
 
 $$
-f(x ; \lambda)= \begin{cases}\lambda e^{-\lambda x} & x \geq 0 \\ 0 & x<0\end{cases}
-$$
+f(x; \lambda) =
+\begin{cases}
+\lambda e^{-\lambda x} & x \geq 0 \\
+0 & x < 0
+\end{cases}
+$$  
 
-where:
+---
 
-$f(x ; \lambda)= \text{Probability Density Function}$
+### 🚀 Summary Table of Distributions  
 
-$\lambda=\text{Rate parameter}$
+| Distribution      | Key Use Case                    | Formula Highlights                                              | Why Learn for TFP?                              |
+|-------------------|----------------------------------|-----------------------------------------------------------------|------------------------------------------------|
+| Binomial          | Success/Failure Outcomes        | $f(k; n, p) = \binom{n}{k} p^k (1-p)^{n-k}$               | Classifications, Yes/No Predictions            |
+| Poisson           | Rare Events in Fixed Intervals  | $f(k; \lambda) = \frac{\lambda^k e^{-\lambda}}{k!}$        | Modeling Events over Time/Space                |
+| Uniform           | Equal Likelihood of Outcomes    | $f(x) = \frac{1}{b-a}$                                    | Random Sampling, Initialization                |
+| Gaussian (Normal) | Symmetric Data Distribution     | $f(x) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}$ | Probabilistic Models, Central Limit Theorem    |
+| Exponential       | Time Until Next Event           | $f(x; \lambda) = \lambda e^{-\lambda x}$                   | Survival Analysis, Sequential Event Modeling   |
 
-$x =\text{Random variable}$
+🎯 **Pro Tip:** Mastering these distributions helps unlock the full potential of TensorFlow Probability, giving you a robust toolkit for solving real-world uncertainty problems.
 
-## **Learning Path**
 
-<img src='https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/blob/main/Tensorflow_Dev_png/Probabilistic%20Deep%20Learning%20Map.png'>
+
+## **Path**
+
+<img src='Tensorflow_Dev_png\tfp-map-new.png'>
 
 ## Notes
 
@@ -227,9 +260,11 @@ $x =\text{Random variable}$
 - [Probability Cheatsheet A](https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/blob/main/01_Probability_Cheatsheet_a.pdf)
 - [Probability Cheatsheet B](https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/blob/main/02_Probability_Cheatsheet_b.pdf)
 
-<p align='center'>
-  <a href="#"><img src='https://tymsai.netlify.app/resource/1.gif' height='10' width=100% alt="div"></a>
-</p>
+
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow&type=Date)](https://star-history.com/#mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow&Date)
+
 
 <p align='center'>
   <a href="#"><img src='https://tymsai.netlify.app/resource/1.gif' height='10' width=100% alt="div"></a>
@@ -239,11 +274,15 @@ $x =\text{Random variable}$
 
 [<img align="left" src="https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/twitter_circle-512.png" width="32px"/>][twitter]
 [<img align="left" src="https://cdn-icons-png.flaticon.com/512/145/145807.png" width="32px"/>][linkedin]
+<<<<<<< HEAD
+[<img align="left" src="https://cdn-icons-png.flaticon.com/512/2626/2626299.png" width="32px"/>][Portfolio]
+=======
 [<img align="left" src="https://cdn2.iconfinder.com/data/icons/whcompare-blue-green-web-hosting-1/425/cdn-512.png" width="32px"/>][Portfolio]
+>>>>>>> 832f8a78133d6f5cbbe8f4565102ec6244eda732
 
 [twitter]: https://twitter.com/F4izy
 [linkedin]: https://www.linkedin.com/in/mohd-faizy/
-[Portfolio]: https://mohdfaizy.com/
+[Portfolio]: https://ai.stackexchange.com/users/36737/faizy?tab=profile
 
 ---
 
