@@ -30,7 +30,7 @@ This repository is a comprehensive collection of **TensorFlow Probability** impl
 
 
 ## 🎯 Overview
-![tfp-map](_img\tfp_map.png)
+![tfp-map](https://raw.githubusercontent.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow/refs/heads/main/_img/tfp_map.png)
 
 ### What Makes This Repository Special?
 
