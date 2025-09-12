@@ -1,3 +1,7 @@
+# 🧠 **Probabilistic Deep Learning with TensorFlow**
+
+<div align="center">
+
 [![author](https://img.shields.io/badge/author-mohd--faizy-red)](https://github.com/mohd-faizy)
 ![made-with-Markdown](https://img.shields.io/badge/Made%20with-markdown-blue)
 ![Language](https://img.shields.io/github/languages/top/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow)
@@ -11,31 +15,25 @@
 [![contributions welcome](https://img.shields.io/static/v1.svg?label=Contributions&message=Welcome&color=0059b3&style=flat-square)](https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow)
 ![Size](https://img.shields.io/github/repo-size/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow)
 
-# 🧠 **Probabilistic Deep Learning with TensorFlow**
+</div>
+
+<img src='https://github.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow/blob/main/Tensorflow_Dev_png/head.png'>
+
+This repository is a comprehensive collection of **TensorFlow Probability** implementations for probabilistic deep learning. The *primary* goal is **educational**: to bridge the gap between traditional deterministic models and real-world uncertainty quantification. 🧠
+
+**Unlock the power of uncertainty quantification in machine learning.** This repository provides hands-on implementations of probabilistic deep learning using TensorFlow Probability (TFP), enabling you to build models that not only make predictions but also quantify how confident they are about those predictions.
+
+**This is *not* just another ML tutorial!** I prioritize practical understanding and real-world applications over theoretical abstractions. Think of it as your interactive guide to probabilistic AI.
+
+> **Documentation**: [Official TFP API Docs](https://www.tensorflow.org/probability/api_docs/python/tfp)
+
 
 <img src='https://github.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow/blob/main/Tensorflow_Dev_png/head.png'>
 
 
 **Unlock the power of uncertainty quantification in machine learning.** This comprehensive repository provides hands-on implementations of probabilistic deep learning using TensorFlow Probability (TFP), bridging the gap between traditional deterministic models and real-world uncertainty.
 
----
 
-## 📚 Table of Contents
-
-- [🎯 Overview](#-overview)
-- [✨ Key Features](#-key-features)
-- [🔧 Prerequisites](#-prerequisites)
-- [🚀 Quick Start](#-quick-start)
-- [📖 Learning Path](#-learning-path)
-- [🎲 Core Probability Distributions](#-core-probability-distributions)
-- [🧪 Hands-On Examples](#-hands-on-examples)
-- [🏗️ Advanced Topics](#️-advanced-topics)
-- [📊 Performance Benchmarks](#-performance-benchmarks)
-- [🤝 Contributing](#-contributing)
-- [🙏 Acknowledgments](#-acknowledgments)
-- [📄 License](#-license)
-
----
 
 ## 🎯 Overview
 
@@ -385,37 +383,18 @@ Special thanks to:
 
 ---
 
-## 📞 Connect & Collaborate
+## ⚖️ License
 
-### Professional Networks
-[<img align="left" src="https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/twitter_circle-512.png" width="32px"/>][twitter]
-[<img align="left" src="https://cdn-icons-png.flaticon.com/512/145/145807.png" width="32px"/>][linkedin]  
-[<img align="left" src="https://cdn-icons-png.flaticon.com/512/2626/2626299.png" width="32px"/>][portfolio]
-
-<br clear="left"/>
-
-### Support This Project
-If this repository helped you, please:
-- ⭐ **Star** the repository
-- 🐛 **Report** issues and bugs
-- 💡 **Suggest** improvements
-- 📢 **Share** with your network
-
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 ---
 
-## 📄 License
+## 🔗 Connect with me
 
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+<div align="center">
 
-
----
-
-*"The best way to learn is by doing. Start with the fundamentals and build your way up to advanced probabilistic models."*
-
-<img src="https://github-readme-stats.vercel.app/api?username=mohd-faizy&show_icons=true&theme=radical" width="380px" height="200px" />
+[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/F4izy)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mohd-faizy/)
+[![Stack Exchange](https://img.shields.io/badge/Stack_Exchange-1E5397?style=for-the-badge&logo=stack-exchange&logoColor=white)](https://ai.stackexchange.com/users/36737/faizy)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mohd-faizy)
 
 </div>
-
-[twitter]: https://twitter.com/F4izy
-[linkedin]: https://www.linkedin.com/in/mohd-faizy/
-[portfolio]: https://ai.stackexchange.com/users/36737/faizy?tab=profile
