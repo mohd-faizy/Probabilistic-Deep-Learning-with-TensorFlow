@@ -17,12 +17,9 @@
 
 </div>
 
-<img src='https://github.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow/blob/main/Tensorflow_Dev_png/head.png'>
+<img src='https://raw.githubusercontent.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow/refs/heads/main/_img/head.png'>
 
 This repository is a comprehensive collection of **TensorFlow Probability** implementations for probabilistic deep learning. The *primary* goal is **educational**: to bridge the gap between traditional deterministic models and real-world uncertainty quantification. 🧠
-
-
-<img src="https://github.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow/blob/main/_img/tfp_dev_summit_ytd.jpg" width="300" height="200" alt="Description">
 
 
 **Unlock the power of uncertainty quantification in machine learning.** This repository provides hands-on implementations of probabilistic deep learning using TensorFlow Probability (TFP), enabling you to build models that not only make predictions but also quantify how confident they are about those predictions.
@@ -50,6 +47,10 @@ This repository demonstrates how **TensorFlow Probability** transforms your stan
 > **Documentation**: [Official TFP API Docs](https://www.tensorflow.org/probability/api_docs/python/tfp)
 
 ### Why Probabilistic Deep Learning Matters
+
+<div style="text-align: center;">
+  <img src="https://raw.githubusercontent.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow/refs/heads/main/_img/tfp_dev_summit_ytd.jpg" width="500" height="280" alt="Description" style="display: block; margin: auto;">
+</div>
 
 Real-world data is messy, incomplete, and uncertain. Probabilistic deep learning addresses these challenges by:
 
