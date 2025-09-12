@@ -1,0 +1,21 @@
+# Core dependencies
+tensorflow
+tensorflow-probability[tf]
+tf-keras
+
+# Data manipulation and analysis
+numpy
+pandas       
+pillow      
+matplotlib
+plotly        
+scikit-learn
+scipy      
+seaborn    
+tqdm          
+
+# Notebook environment
+jupyter
+ipython
+notebook
+wordcloud

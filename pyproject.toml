@@ -1,0 +1,24 @@
+[project]
+name = "probabilistic-deep-learning-with-tensorflow"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "ipython>=9.5.0",
+    "jupyter>=1.1.1",
+    "matplotlib>=3.10.6",
+    "notebook>=7.4.5",
+    "numpy>=2.3.3",
+    "pandas>=2.3.2",
+    "pillow>=11.3.0",
+    "plotly>=6.3.0",
+    "scikit-learn>=1.7.2",
+    "scipy>=1.16.1",
+    "seaborn>=0.13.2",
+    "tensorflow>=2.20.0",
+    "tensorflow-probability[tf]>=0.25.0",
+    "tf-keras>=2.20.1",
+    "tqdm>=4.67.1",
+    "wordcloud>=1.9.4",
+]

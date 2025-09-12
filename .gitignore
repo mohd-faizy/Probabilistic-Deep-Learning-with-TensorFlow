@@ -1,0 +1,22 @@
+# Environment variables
+*.env
+
+# Python virtual environment
+venv/
+
+# Binary files
+*.bin
+
+# Compiled Python files
+*.pyc
+__pycache__/
+
+# VS Code settings (optional but useful)
+.vscode/
+
+# Chroma vector store or database files (optional)
+*.sqlite3
+chroma_db/
+
+# Jupyter Notebook checkpoints (optional)
+.ipynb_checkpoints/
