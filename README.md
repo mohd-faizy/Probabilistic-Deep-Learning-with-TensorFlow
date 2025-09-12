@@ -383,15 +383,6 @@ We welcome contributions from the community! Here's how you can help:
 - [Leveraging Heteroscedastic Aleatoric Uncertainties for Robust Real-Time LiDAR 3D Object Detection](https://arxiv.org/abs/2002.05796) - Chang et al. (2020)
 - [Predictive Uncertainty Estimation via Prior Networks](https://arxiv.org/abs/1909.00218) - Malinin & Gales (2018)
 
----
-
-## 🙏 Acknowledgments
-
-Special thanks to:
-- **TensorFlow Probability Team** for creating this amazing library
-- **Google AI** for advancing probabilistic machine learning research  
-- **The open-source community** for continuous contributions and feedback
-- **Academic researchers** whose work forms the theoretical foundation
 
 ---
 
