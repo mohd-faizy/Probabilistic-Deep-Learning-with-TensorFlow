@@ -28,12 +28,6 @@ This repository is a comprehensive collection of **TensorFlow Probability** impl
 > **Documentation**: [Official TFP API Docs](https://www.tensorflow.org/probability/api_docs/python/tfp)
 
 
-<img src='https://github.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow/blob/main/Tensorflow_Dev_png/head.png'>
-
-
-**Unlock the power of uncertainty quantification in machine learning.** This comprehensive repository provides hands-on implementations of probabilistic deep learning using TensorFlow Probability (TFP), bridging the gap between traditional deterministic models and real-world uncertainty.
-
-
 
 ## 🎯 Overview
 
