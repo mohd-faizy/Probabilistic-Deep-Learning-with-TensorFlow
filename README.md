@@ -346,20 +346,42 @@ We welcome contributions from the community! Here's how you can help:
 
 ## 📚 Additional Resources
 
-### Educational Content
-- **[StatQuest](https://www.youtube.com/channel/UCtYLUTtgS3k1Fg4y5tAhLbw)**: Excellent statistical explanations
-- **[3Blue1Brown](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw)**: Visual mathematics
-- **[Towards Data Science](https://towardsdatascience.com/)**: Medium publication with ML articles
-
 ### Reference Materials
 - [Probability Cheatsheet A](CheatSheet/01_Probability_Cheatsheet_a.pdf)
 - [Probability Cheatsheet B](CheatSheet/02_Probability_Cheatsheet_b.pdf)
 - [TensorFlow Probability Official Guide](https://www.tensorflow.org/probability)
 
 ### Research Papers
-- [Variational Inference: A Review for Statisticians](https://arxiv.org/abs/1601.00670)
-- [Probabilistic Machine Learning and Artificial Intelligence](https://www.nature.com/articles/nature14541)
-- [Uncertainty Quantification using Bayesian Neural Networks](https://arxiv.org/abs/1505.05424)
+
+#### Foundational Papers
+- [Auto-Encoding Variational Bayes](https://arxiv.org/abs/1312.6114) - Kingma & Welling (2013)
+- [Stochastic Backpropagation and Approximate Inference in Deep Generative Models](https://arxiv.org/abs/1401.4082) - Rezende et al. (2014)
+- [Weight Uncertainty in Neural Networks](https://arxiv.org/abs/1505.05424) - Blundell et al. (2015)
+- [Variational Inference: A Review for Statisticians](https://arxiv.org/abs/1601.00670) - Blei et al. (2017)
+- [Probabilistic Machine Learning and Artificial Intelligence](https://www.nature.com/articles/nature14541) - Ghahramani (2015)
+
+#### Normalizing Flows & Bijectors
+- [Normalizing Flows for Probabilistic Modeling and Inference](https://arxiv.org/abs/1912.02762) - Papamakarios et al. (2019)
+- [Density estimation using Real NVP](https://arxiv.org/abs/1605.08803) - Dinh et al. (2016)
+- [Glow: Generative Flow with Invertible 1x1 Convolutions](https://arxiv.org/abs/1807.03039) - Kingma & Dhariwal (2018)
+
+#### Bayesian Neural Networks
+- [Practical Variational Inference for Neural Networks](https://papers.nips.cc/paper/2011/hash/7eb3c8be3d411e8ebfab2f32016d5ee5-Abstract.html) - Graves (2011)
+- [What Uncertainties Do We Need in Bayesian Deep Learning for Computer Vision?](https://arxiv.org/abs/1703.04977) - Kendall & Gal (2017)
+- [Simple and Scalable Predictive Uncertainty Estimation using Deep Ensembles](https://arxiv.org/abs/1612.01474) - Lakshminarayanan et al. (2017)
+
+#### Variational Inference & MCMC
+- [Black Box Variational Inference](https://arxiv.org/abs/1401.0118) - Ranganath et al. (2014)
+- [Automatic Differentiation Variational Inference](https://arxiv.org/abs/1603.00788) - Kucukelbir et al. (2017)
+- [The No-U-Turn Sampler: Adaptively Setting Path Lengths in Hamiltonian Monte Carlo](https://arxiv.org/abs/1111.4246) - Hoffman & Gelman (2014)
+
+#### TensorFlow Probability Specific
+- [TensorFlow Distributions](https://arxiv.org/abs/1711.10604) - Dillon et al. (2017)
+- [Probabilistic Programming and Bayesian Methods for Hackers](https://github.com/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers) - Davidson-Pilon (2015)
+
+#### Applications & Case Studies
+- [Leveraging Heteroscedastic Aleatoric Uncertainties for Robust Real-Time LiDAR 3D Object Detection](https://arxiv.org/abs/2002.05796) - Chang et al. (2020)
+- [Predictive Uncertainty Estimation via Prior Networks](https://arxiv.org/abs/1909.00218) - Malinin & Gales (2018)
 
 ---
 
