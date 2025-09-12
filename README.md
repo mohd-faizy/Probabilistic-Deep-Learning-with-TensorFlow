@@ -30,6 +30,7 @@ This repository is a comprehensive collection of **TensorFlow Probability** impl
 
 
 ## 🎯 Overview
+![tfp-map](_img\tfp_map.png)
 
 ### What Makes This Repository Special?
 
