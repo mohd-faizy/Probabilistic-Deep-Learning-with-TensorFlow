@@ -48,9 +48,10 @@ This repository demonstrates how **TensorFlow Probability** transforms your stan
 
 ### Why Probabilistic Deep Learning Matters
 
-<div style="text-align: center;">
-  <img src="https://raw.githubusercontent.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow/refs/heads/main/_img/tfp_dev_summit_ytd.jpg" width="500" height="280" alt="Description" style="display: block; margin: auto;">
-</div>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow/refs/heads/main/_img/tfp_dev_summit_ytd.jpg" width="500" height="280" alt="Description">
+</p>
+
 
 Real-world data is messy, incomplete, and uncertain. Probabilistic deep learning addresses these challenges by:
 
