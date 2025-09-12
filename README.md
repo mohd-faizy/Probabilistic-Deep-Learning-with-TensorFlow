@@ -21,6 +21,10 @@
 
 This repository is a comprehensive collection of **TensorFlow Probability** implementations for probabilistic deep learning. The *primary* goal is **educational**: to bridge the gap between traditional deterministic models and real-world uncertainty quantification. 🧠
 
+
+<img src="https://github.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow/blob/main/_img/tfp_dev_summit_ytd.jpg" width="300" height="200" alt="Description">
+
+
 **Unlock the power of uncertainty quantification in machine learning.** This repository provides hands-on implementations of probabilistic deep learning using TensorFlow Probability (TFP), enabling you to build models that not only make predictions but also quantify how confident they are about those predictions.
 
 **This is *not* just another ML tutorial!** I prioritize practical understanding and real-world applications over theoretical abstractions. Think of it as your interactive guide to probabilistic AI.
@@ -376,6 +380,7 @@ Special thanks to:
 ## ⚖️ License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+
 ---
 
 ## 🔗 Connect with me
