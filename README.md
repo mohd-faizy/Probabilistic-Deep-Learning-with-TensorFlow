@@ -336,12 +336,6 @@ We welcome contributions from the community! Here's how you can help:
 4. **Push** to the branch (`git push origin feature/amazing-feature`)
 5. **Open** a Pull Request
 
-### Code Standards
-- Follow **PEP 8** style guidelines
-- Include **comprehensive docstrings**
-- Add **unit tests** for new functionality
-- Ensure **reproducibility** with random seeds
-
 ---
 
 ## 🌟 Star History
