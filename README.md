@@ -2,31 +2,31 @@
 
 <div align="center">
 
-[![author](https://img.shields.io/badge/author-mohd--faizy-red)](https://github.com/mohd-faizy)
-![made-with-Markdown](https://img.shields.io/badge/Made%20with-markdown-blue)
-![Language](https://img.shields.io/github/languages/top/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow)
-![Platform](https://img.shields.io/badge/platform-jupyter%20labs-blue)
-![Maintained](https://img.shields.io/maintenance/yes/2025)
-![Last Commit](https://img.shields.io/github/last-commit/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow)
-[![GitHub issues](https://img.shields.io/github/issues/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow)](https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/issues)
-[![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://opensource.com/resources/what-open-source)
-![Stars GitHub](https://img.shields.io/github/stars/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow)
-[![GitHub license](https://img.shields.io/github/license/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow)](https://github.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow/blob/master/LICENSE)
-[![contributions welcome](https://img.shields.io/static/v1.svg?label=Contributions&message=Welcome&color=0059b3&style=flat-square)](https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow)
-![Size](https://img.shields.io/github/repo-size/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow)
+[![Author](https://img.shields.io/badge/Author-mohd--faizy-red?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mohd-faizy)
+[![Made with Markdown](https://img.shields.io/badge/Made%20with-Markdown-blue?style=for-the-badge&logo=markdown&logoColor=white)](https://www.markdownguide.org/)
+[![Language](https://img.shields.io/github/languages/top/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow?style=for-the-badge)](https://github.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow)
+[![Platform](https://img.shields.io/badge/Platform-Jupyter%20Labs-blue?style=for-the-badge&logo=jupyter&logoColor=white)](https://jupyter.org/)
+[![Maintained](https://img.shields.io/maintenance/yes/2025?style=for-the-badge)](https://github.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow)
+[![Last Commit](https://img.shields.io/github/last-commit/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow?style=for-the-badge&logo=git&logoColor=white)](https://github.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow)
+[![GitHub Issues](https://img.shields.io/github/issues/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/issues)
+[![Stars](https://img.shields.io/github/stars/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow)
+[![License](https://img.shields.io/github/license/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow?style=for-the-badge&logo=opensourceinitiative&logoColor=white)](https://github.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow/blob/master/LICENSE)
+[![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-0059b3?style=for-the-badge&logo=handshake&logoColor=white)](https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow)
+[![Repo Size](https://img.shields.io/github/repo-size/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow)
+
 
 </div>
 
 <img src='https://raw.githubusercontent.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow/refs/heads/main/_img/head.png'>
 
-This repository is a comprehensive collection of **TensorFlow Probability** implementations for probabilistic deep learning. The *primary* goal is **educational**: to bridge the gap between traditional deterministic models and real-world uncertainty quantification. 🧠
+This repository is a comprehensive collection of **TensorFlow Probability** implementations for probabilistic deep learning. The *primary* goal is **educational**: to bridge the gap between traditional deterministic models and real-world uncertainty quantification. 
 
 
-**Unlock the power of uncertainty quantification in machine learning.** This repository provides hands-on implementations of probabilistic deep learning using TensorFlow Probability (TFP), enabling you to build models that not only make predictions but also quantify how confident they are about those predictions.
+✨**Unlock the power of uncertainty quantification in machine learning.** 
 
-**This is *not* just another ML tutorial!** I prioritize practical understanding and real-world applications over theoretical abstractions. Think of it as your interactive guide to probabilistic AI.
+This repository provides hands-on implementations of probabilistic deep learning using TensorFlow Probability (TFP), enabling you to build models that not only make predictions but also quantify how confident they are about those predictions.
 
-> **Documentation**: [Official TFP API Docs](https://www.tensorflow.org/probability/api_docs/python/tfp)
+> **Documentation**: [TFP API Docs](https://www.tensorflow.org/probability/api_docs/python/tfp)
 
 
 
@@ -37,6 +37,12 @@ This repository is a comprehensive collection of **TensorFlow Probability** impl
 
 Traditional machine learning models provide point estimates without quantifying uncertainty. In critical applications like medical diagnosis, autonomous vehicles, or financial modeling, **knowing how confident your model is** can be the difference between success and catastrophic failure.
 
+- Enables models to express confidence levels using probabilistic layers and Bayesian neural networks.
+
+- Supports sampling, log-likelihood evaluation, and manipulation of complex distributions (univariate & multivariate).
+
+- Powers VAEs and normalizing flows for density estimation, representation learning, and synthetic data generation.
+
 This repository demonstrates how **TensorFlow Probability** transforms your standard neural networks into probabilistic powerhouses that:
 
 - **Quantify uncertainty** in predictions
@@ -44,7 +50,6 @@ This repository demonstrates how **TensorFlow Probability** transforms your stan
 - **Perform Bayesian inference** at scale
 - **Generate realistic synthetic data** through advanced generative models
 
-> **Documentation**: [Official TFP API Docs](https://www.tensorflow.org/probability/api_docs/python/tfp)
 
 ### Why Probabilistic Deep Learning Matters
 
@@ -58,11 +63,23 @@ This repository demonstrates how **TensorFlow Probability** transforms your stan
 
 Real-world data is messy, incomplete, and uncertain. Probabilistic deep learning addresses these challenges by:
 
-- **Handling Data Scarcity**: Bayesian approaches work well with limited data
-- **Robust Decision Making**: Uncertainty estimates guide better decisions
+- **Handling Data Scarcity**: Bayesian approaches work well with limited data.
+- **Robust Decision Making**: Uncertainty estimates guide better decisions.
 - **Interpretable AI**: Understanding model confidence builds trust
-- **Anomaly Detection**: Identifying outliers and unusual patterns
-- **Risk Assessment**: Quantifying potential failure modes
+- **Anomaly Detection**: Identifying outliers and unusual patterns.
+- **Risk Assessment**: Quantifying potential failure modes.
+
+
+#### ⚙️**Technical Strengths**
+- Bayesian neural networks: Adds priors to weights and calibrates predictive uncertainty for out-of-distribution robustness.
+
+- Normalizing flows: Uses invertible transforms for expressive density estimation and efficient sampling.
+
+- Variational inference: Optimizes ELBO with reparameterization for controllable generation and learning.
+
+#### 🚀**Trade-offs & Performance**
+- Higher memory and training time than deterministic models.
+- Gains in interpretability, calibrated risk, and anomaly detection often outweigh the cost
 
 
 ---
@@ -256,34 +273,6 @@ $$
 
 ---
 
-## 🏗️ Advanced Topics
-
-### Bayesian Neural Networks
-Transform standard neural networks into uncertainty-aware models by placing probability distributions over weights instead of point estimates.
-
-**Key Benefits:**
-- **Uncertainty Quantification**: Know when your model is uncertain
-- **Better Generalization**: Regularization through Bayesian priors  
-- **Robust Predictions**: Handle out-of-distribution data gracefully
-
-### Variational Autoencoders (VAEs)
-Generative models that learn meaningful latent representations while enabling controllable generation.
-
-**Applications:**
-- **Image Generation**: Create realistic synthetic images
-- **Data Augmentation**: Generate training examples
-- **Anomaly Detection**: Identify unusual patterns
-- **Representation Learning**: Learn compressed data representations
-
-### Normalizing Flows
-Invertible neural networks that transform simple distributions into complex ones.
-
-**Advantages:**
-- **Exact Likelihood**: Compute exact probabilities, not approximations
-- **Flexible Modeling**: Capture complex multimodal distributions
-- **Efficient Sampling**: Generate samples through inverse transformation
-
----
 
 ## 📊 Performance Benchmarks
 
@@ -295,7 +284,7 @@ Invertible neural networks that transform simple distributions into complex ones
 | CIFAR-10 Classification | 50k samples | 15 min | 45 min | 60 min | 90 min |
 | CelebA Generation | 200k samples | N/A | N/A | 120 min | 180 min |
 
-*Benchmarks on NVIDIA RTX 3080 GPU*
+>*Benchmarks on NVIDIA RTX 3080 GPU*
 
 ### Memory Usage
 
@@ -324,13 +313,6 @@ Probabilistic models typically require **2-4x more memory** than standard models
 ## 🤝 Contributing
 
 We welcome contributions from the community! Here's how you can help:
-
-### Areas for Contribution
-- **New Examples**: Implement additional probabilistic models
-- **Documentation**: Improve explanations and add tutorials  
-- **Bug Fixes**: Identify and resolve issues
-- **Performance**: Optimize implementations for better efficiency
-- **Visualization**: Create better plots and interactive demos
 
 ### Contribution Process
 1. **Fork** the repository
