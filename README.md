@@ -3,8 +3,8 @@
 <div align="center">
 
 [![Author](https://img.shields.io/badge/Author-mohd--faizy-red?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mohd-faizy)
-[![Made with Markdown](https://img.shields.io/badge/Made%20with-Markdown-blue?style=for-the-badge&logo=markdown&logoColor=white)](https://www.markdownguide.org/)
-[![Language](https://img.shields.io/github/languages/top/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow?style=for-the-badge)](https://github.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow)
+[![TensorFlow](https://img.shields.io/badge/TensorFlow-2.15%2B-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)](https://tensorflow.org/)
+[![TensorFlow Probability](https://img.shields.io/badge/TensorFlow%20Probability-0.23%2B-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)](https://www.tensorflow.org/probability)
 [![Platform](https://img.shields.io/badge/Platform-Jupyter%20Labs-blue?style=for-the-badge&logo=jupyter&logoColor=white)](https://jupyter.org/)
 [![Maintained](https://img.shields.io/maintenance/yes/2025?style=for-the-badge)](https://github.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow)
 [![Last Commit](https://img.shields.io/github/last-commit/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow?style=for-the-badge&logo=git&logoColor=white)](https://github.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow)
@@ -13,6 +13,9 @@
 [![License](https://img.shields.io/github/license/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow?style=for-the-badge&logo=opensourceinitiative&logoColor=white)](https://github.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow/blob/master/LICENSE)
 [![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-0059b3?style=for-the-badge&logo=handshake&logoColor=white)](https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow)
 [![Repo Size](https://img.shields.io/github/repo-size/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow)
+
+
+
 
 
 </div>
