@@ -6,7 +6,7 @@
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-2.15%2B-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)](https://tensorflow.org/)
 [![TensorFlow Probability](https://img.shields.io/badge/TensorFlow%20Probability-0.23%2B-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)](https://www.tensorflow.org/probability)
 [![Platform](https://img.shields.io/badge/Platform-Jupyter%20Labs-blue?style=for-the-badge&logo=jupyter&logoColor=white)](https://jupyter.org/)
-[![Maintained](https://img.shields.io/maintenance/yes/2025?style=for-the-badge)](https://github.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow)
+[![Maintained](https://img.shields.io/maintenance/yes/2026?style=for-the-badge)](https://github.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow)
 [![Last Commit](https://img.shields.io/github/last-commit/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow?style=for-the-badge&logo=git&logoColor=white)](https://github.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow)
 [![GitHub Issues](https://img.shields.io/github/issues/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/issues)
 [![Stars](https://img.shields.io/github/stars/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow)
@@ -20,7 +20,7 @@
 
 </div>
 
-<img src='https://raw.githubusercontent.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow/refs/heads/main/_img/head.png'>
+<img src='_img/head.png'>
 
 This repository is a comprehensive collection of **TensorFlow Probability** implementations for probabilistic deep learning. The *primary* goal is **educational**: to bridge the gap between traditional deterministic models and real-world uncertainty quantification. 
 
@@ -34,7 +34,7 @@ This repository provides hands-on implementations of probabilistic deep learning
 
 
 ## 🎯 Overview
-![tfp-map](https://raw.githubusercontent.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow/refs/heads/main/_img/tfp_map.png)
+![tfp-map](_img/tfp_map.png)
 
 ### What Makes This Repository Special?
 
