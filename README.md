@@ -326,12 +326,6 @@ We welcome contributions from the community! Here's how you can help:
 
 ---
 
-## 🌟 Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow&type=Date)](https://star-history.com/#mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow&Date)
-
----
-
 ## 📚 Additional Resources
 
 ### Reference Materials
