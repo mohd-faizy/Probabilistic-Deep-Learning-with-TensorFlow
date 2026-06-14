@@ -269,10 +269,25 @@ $$
 | 08 | Multivariate Gaussian Full Covariance | 🔴 Advanced | Full covariance, correlation modeling | [![Open Notebook](https://img.shields.io/badge/Open-Notebook-blue)](01_The%20TensorFlow_Probability_library/08_Multivariate_Gaussian_with_full_covariance.ipynb) |
 | 09 | Broadcasting Rules | 🟡 Intermediate | Shape manipulation, batch processing | [![Open Notebook](https://img.shields.io/badge/Open-Notebook-blue)](01_The%20TensorFlow_Probability_library/09_Broadcasting_rules.ipynb) |
 | 10 | Naive Bayes & Logistic Regression | 🟡 Intermediate | Generative vs discriminative models | [![Open Notebook](https://img.shields.io/badge/Open-Notebook-blue)](01_The%20TensorFlow_Probability_library/10_Naive_Bayes_%26_logistic_regression.ipynb) |
-| 11 | Probabilistic Layers & Bayesian NNs | 🔴 Advanced | DenseVariational, weight uncertainty | [![Open Notebook](https://img.shields.io/badge/Open-Notebook-blue)](02_Probabilistic_layers_and_Bayesian_Neural_Networks/Probabilistic_layers_and_Bayesian_Neural_Networks.ipynb) |
-| 12 | Bijectors & Normalizing Flows | 🔴 Advanced | tfp.bijectors, invertible transforms | [![Open Notebook](https://img.shields.io/badge/Open-Notebook-blue)](03_Bijectors_and_Normalising_Flows/Bijectors_and_Normalising_Flows.ipynb) |
-| 13 | Variational Autoencoders | 🔴 Advanced | ELBO, reparameterization trick | [![Open Notebook](https://img.shields.io/badge/Open-Notebook-blue)](04_Variational_Autoencoders/Variational_Autoencoders.ipynb) |
-| 14 | Probabilistic Generative Models | 🔴 Expert | Complete pipeline, model evaluation | [![Open Notebook](https://img.shields.io/badge/Open-Notebook-blue)](05_Capstone_Project/Probabilistic_generative_models.ipynb) |
+| 11 | Probabilistic Layers & Bayesian NNs | 🔴 Advanced | DenseVariational, weight uncertainty, captured epistemic/aleatoric risk | [![Open Notebook](https://img.shields.io/badge/Open-Notebook-blue)](02_Probabilistic_layers_and_Bayesian_Neural_Networks/Probabilistic_layers_and_Bayesian_Neural_Networks.ipynb) |
+| 12 | Bijectors & Normalizing Flows | 🔴 Advanced | tfp.bijectors, invertible transforms, RealNVP, coupling layers | [![Open Notebook](https://img.shields.io/badge/Open-Notebook-blue)](03_Bijectors_and_Normalising_Flows/Bijectors_and_Normalising_Flows.ipynb) |
+| 13 | Variational Autoencoders | 🔴 Advanced | ELBO, reparameterization trick, celebrity face generation | [![Open Notebook](https://img.shields.io/badge/Open-Notebook-blue)](04_Variational_Autoencoders/Variational_Autoencoders.ipynb) |
+| 14 | Introduction to MCMC | 🔴 Advanced | Sampling problems, Metropolis-Hastings from scratch | [![Open Notebook](https://img.shields.io/badge/Open-Notebook-blue)](05_MCMC_and_Hamiltonian_Monte_Carlo/00_Introduction_to_MCMC.ipynb) |
+| 15 | Hamiltonian Monte Carlo | 🔴 Advanced | Hamiltonian dynamics, leapfrog integration, HMC in TFP | [![Open Notebook](https://img.shields.io/badge/Open-Notebook-blue)](05_MCMC_and_Hamiltonian_Monte_Carlo/01_Hamiltonian_Monte_Carlo.ipynb) |
+| 16 | Bayesian Model Comparison | 🔴 Advanced | Marginal likelihood, Bayes factors estimation via MCMC | [![Open Notebook](https://img.shields.io/badge/Open-Notebook-blue)](05_MCMC_and_Hamiltonian_Monte_Carlo/02_Bayesian_Model_Comparison.ipynb) |
+| 17 | Hierarchical Bayesian Models | 🔴 Advanced | Joint distributions, pooling strategies, TFP joint distribution APIs | [![Open Notebook](https://img.shields.io/badge/Open-Notebook-blue)](05_MCMC_and_Hamiltonian_Monte_Carlo/03_Hierarchical_Bayesian_Models.ipynb) |
+| 18 | Gaussian Mixture Models | 🟡 Intermediate | MixtureSameFamily, 1D/2D mixtures, sampling & density evaluation | [![Open Notebook](https://img.shields.io/badge/Open-Notebook-blue)](06_Mixture_Models_and_EM_Algorithm/00_Gaussian_Mixture_Models.ipynb) |
+| 19 | Expectation Maximization (EM) | 🔴 Advanced | Latent variables, ELBO derivation, GMM EM from scratch | [![Open Notebook](https://img.shields.io/badge/Open-Notebook-blue)](06_Mixture_Models_and_EM_Algorithm/01_Expectation_Maximization_Deep_Dive.ipynb) |
+| 20 | Bayesian Mixture Models | 🔴 Advanced | Dirichlet-Multinomial mixtures, fully Bayesian GMMs with MCMC | [![Open Notebook](https://img.shields.io/badge/Open-Notebook-blue)](06_Mixture_Models_and_EM_Algorithm/02_Bayesian_Mixture_Models_with_MCMC.ipynb) |
+| 21 | Introduction to Gaussian Processes | 🔴 Advanced | Distributions over functions, RBF/periodic kernels, GP prior sampling | [![Open Notebook](https://img.shields.io/badge/Open-Notebook-blue)](07_Gaussian_Processes/00_Introduction_to_Gaussian_Processes.ipynb) |
+| 22 | GP Classification & Kernels | 🔴 Advanced | Bernoulli likelihood, kernel engineering/arithmetic, latent GP classification | [![Open Notebook](https://img.shields.io/badge/Open-Notebook-blue)](07_Gaussian_Processes/01_GP_Classification_and_Kernels.ipynb) |
+| 23 | Sparse & Scalable GPs | 🔴 Expert | Inducing variables, Variational Sparse GP (VSGP) optimization | [![Open Notebook](https://img.shields.io/badge/Open-Notebook-blue)](07_Gaussian_Processes/02_Sparse_and_Scalable_GPs.ipynb) |
+| 24 | Structural Time Series Models | 🟡 Intermediate | State-space models, local linear trend, seasonality components, tfp.sts | [![Open Notebook](https://img.shields.io/badge/Open-Notebook-blue)](08_Probabilistic_Time_Series/00_Structural_Time_Series_Models.ipynb) |
+| 25 | Bayesian Time Series Forecasting | 🔴 Advanced | Multiple seasonalities, regression, spike-and-slab variable selection | [![Open Notebook](https://img.shields.io/badge/Open-Notebook-blue)](08_Probabilistic_Time_Series/01_Bayesian_Time_Series_Forecasting.ipynb) |
+| 26 | Deep Probabilistic Time Series | 🔴 Advanced | Probabilistic LSTMs, Negative Log-Likelihood (NLL) loss, seq-to-seq uncertainty | [![Open Notebook](https://img.shields.io/badge/Open-Notebook-blue)](08_Probabilistic_Time_Series/02_Deep_Probabilistic_Time_Series.ipynb) |
+| 27 | Capstone: Bayesian Medical Diagnosis | 🔴 Expert | Clinical decision support, BNN for diagnosis, KL weight regularization | [![Open Notebook](https://img.shields.io/badge/Open-Notebook-blue)](09_Capstone_Bayesian_Medical_Diagnosis/00_Bayesian_Medical_Diagnosis.ipynb) |
+| 28 | Capstone: Probabilistic Forecasting | 🔴 Expert | Synthetic market data, BSTS, Value at Risk (VaR), risk quantification | [![Open Notebook](https://img.shields.io/badge/Open-Notebook-blue)](10_Capstone_Probabilistic_Forecasting/00_Probabilistic_Financial_Forecasting.ipynb) |
+| 29 | Capstone: Probabilistic Generative Models | 🔴 Expert | Normalizing flow dataset creation, VAE, latent space interpolation | [![Open Notebook](https://img.shields.io/badge/Open-Notebook-blue)](11_Capstone_Probabilistic_generative_models/Probabilistic_generative_models.ipynb) |
 
 ---
 
@@ -348,7 +363,7 @@ We welcome contributions from the community! Here's how you can help:
 - [Glow: Generative Flow with Invertible 1x1 Convolutions](https://arxiv.org/abs/1807.03039) - Kingma & Dhariwal (2018)
 
 #### Bayesian Neural Networks
-- [Practical Variational Inference for Neural Networks](https://papers.nips.cc/paper/2011/hash/7eb3c8be3d411e8ebfab2f32016d5ee5-Abstract.html) - Graves (2011)
+- [Practical Variational Inference for Neural Networks](https://papers.nips.cc/paper/4329-practical-variational-inference-for-neural-networks) - Graves (2011)
 - [What Uncertainties Do We Need in Bayesian Deep Learning for Computer Vision?](https://arxiv.org/abs/1703.04977) - Kendall & Gal (2017)
 - [Simple and Scalable Predictive Uncertainty Estimation using Deep Ensembles](https://arxiv.org/abs/1612.01474) - Lakshminarayanan et al. (2017)
 
@@ -356,6 +371,14 @@ We welcome contributions from the community! Here's how you can help:
 - [Black Box Variational Inference](https://arxiv.org/abs/1401.0118) - Ranganath et al. (2014)
 - [Automatic Differentiation Variational Inference](https://arxiv.org/abs/1603.00788) - Kucukelbir et al. (2017)
 - [The No-U-Turn Sampler: Adaptively Setting Path Lengths in Hamiltonian Monte Carlo](https://arxiv.org/abs/1111.4246) - Hoffman & Gelman (2014)
+
+#### Gaussian Processes
+- [Gaussian Processes for Machine Learning](http://www.gaussianprocess.org/gpml/) - Rasmussen & Williams (2006)
+- [Variational Learning of Inducing Variables in Sparse Gaussian Processes](http://proceedings.mlr.press/v5/titsias09a.html) - Titsias (2009)
+
+#### Probabilistic Time Series Forecasting
+- [Predicting the Present with Bayesian Structural Time Series](https://people.ischool.berkeley.edu/~hal/Papers/2013/pred-present-with-bsts.pdf) - Scott & Varian (2014)
+- [Deep State Space Models for Time Series Forecasting](https://papers.nips.cc/paper/7818-deep-state-space-models-for-time-series-forecasting) - Rangapuram et al. (2018)
 
 #### TensorFlow Probability Specific
 - [TensorFlow Distributions](https://arxiv.org/abs/1711.10604) - Dillon et al. (2017)
