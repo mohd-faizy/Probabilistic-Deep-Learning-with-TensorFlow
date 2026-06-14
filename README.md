@@ -2,27 +2,41 @@
 
 <div align="center">
 
-<h1>🧠Probabilistic Deep Learning with TensorFlow</h1>
-
-<img src='_img/head.png'>
-
-<br>
-
-[![Author](https://img.shields.io/badge/Author-mohd--faizy-red?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mohd-faizy)
-[![TensorFlow](https://img.shields.io/badge/TensorFlow-2.15%2B-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)](https://tensorflow.org/)
-[![TensorFlow Probability](https://img.shields.io/badge/TensorFlow%20Probability-0.23%2B-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)](https://www.tensorflow.org/probability)
-[![Platform](https://img.shields.io/badge/Platform-Jupyter%20Labs-blue?style=for-the-badge&logo=jupyter&logoColor=white)](https://jupyter.org/)
-[![Maintained](https://img.shields.io/maintenance/yes/2026?style=for-the-badge)](https://github.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow)
-[![Last Commit](https://img.shields.io/github/last-commit/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow?style=for-the-badge&logo=git&logoColor=white)](https://github.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow)
-[![GitHub Issues](https://img.shields.io/github/issues/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow/issues)
-[![Stars](https://img.shields.io/github/stars/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow)
-[![License](https://img.shields.io/github/license/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow?style=for-the-badge&logo=opensourceinitiative&logoColor=white)](https://github.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow/blob/master/LICENSE)
-[![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-0059b3?style=for-the-badge&logo=handshake&logoColor=white)](https://github.com/mohd-faizy/07T_Probabilistic-Deep-Learning-with-TensorFlow)
-[![Repo Size](https://img.shields.io/github/repo-size/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow)
+<a href="https://github.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow">
+  <img src="_img/head.png" alt="Probabilistic Deep Learning with TensorFlow Banner" width="900" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);">
+</a>
 
 
+---
 
+<h1>🧠 Probabilistic Deep Learning with TensorFlow</h1>
 
+<p align="center">
+  <strong>Unlock the power of uncertainty quantification, density estimation, and generative modeling with TensorFlow Probability.</strong>
+</p>
+
+<!-- Tech Stack & Platforms -->
+<p align="center">
+  <a href="https://tensorflow.org/"><img src="https://img.shields.io/badge/TensorFlow-2.15%2B-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" alt="TensorFlow"></a>
+  <a href="https://www.tensorflow.org/probability"><img src="https://img.shields.io/badge/TensorFlow%20Probability-0.23%2B-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white" alt="TensorFlow Probability"></a>
+  <a href="https://jupyter.org/"><img src="https://img.shields.io/badge/Platform-Jupyter%20Labs-blue?style=for-the-badge&logo=jupyter&logoColor=white" alt="Platform"></a>
+</p>
+
+<!-- Repository Metrics -->
+<p align="center">
+  <a href="https://github.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow/stargazers"><img src="https://img.shields.io/github/stars/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow?style=for-the-badge&logo=github&logoColor=white&color=ffd700" alt="Stars"></a>
+  <a href="https://github.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow/issues"><img src="https://img.shields.io/github/issues/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow?style=for-the-badge&logo=github&logoColor=white&color=ef4444" alt="GitHub Issues"></a>
+  <a href="https://github.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow/commits/main"><img src="https://img.shields.io/github/last-commit/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow?style=for-the-badge&logo=git&logoColor=white&color=8b5cf6" alt="Last Commit"></a>
+  <a href="https://github.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow"><img src="https://img.shields.io/github/repo-size/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow?style=for-the-badge&logo=github&logoColor=white&color=6b7280" alt="Repo Size"></a>
+</p>
+
+<!-- Meta & Community -->
+<p align="center">
+  <a href="https://github.com/mohd-faizy"><img src="https://img.shields.io/badge/Author-mohd--faizy-red?style=for-the-badge&logo=github&logoColor=white" alt="Author"></a>
+  <a href="https://github.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow"><img src="https://img.shields.io/maintenance/yes/2026?style=for-the-badge&color=28a745" alt="Maintained"></a>
+  <a href="https://github.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow/blob/main/LICENSE"><img src="https://img.shields.io/github/license/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow?style=for-the-badge&logo=opensourceinitiative&logoColor=white&color=24292e" alt="License"></a>
+  <a href="https://github.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow/pulls"><img src="https://img.shields.io/badge/Contributions-Welcome-0059b3?style=for-the-badge&logo=handshake&logoColor=white" alt="Contributions Welcome"></a>
+</p>
 
 </div>
 
@@ -30,8 +44,6 @@
 
 This repository is a comprehensive collection of **TensorFlow Probability** implementations for probabilistic deep learning. The *primary* goal is **educational**: to bridge the gap between traditional deterministic models and real-world uncertainty quantification. 
 
-
-✨**Unlock the power of uncertainty quantification in machine learning.** 
 
 This repository provides hands-on implementations of probabilistic deep learning using TensorFlow Probability (TFP), enabling you to build models that not only make predictions but also quantify how confident they are about those predictions.
 
