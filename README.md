@@ -261,7 +261,7 @@ $$
 | 00 | Univariate Distributions | 🟢 Beginner | Normal, Exponential, Beta distributions | [![Open Notebook](https://img.shields.io/badge/Open-Notebook-blue)](01_The%20TensorFlow_Probability_library/00_Univariate_Distributions.ipynb) |
 | 01 | Multivariate Distributions | 🟡 Intermediate | MultivariateNormal, covariance structure | [![Open Notebook](https://img.shields.io/badge/Open-Notebook-blue)](01_The%20TensorFlow_Probability_library/01_MultiVariate_Distributions.ipynb) |
 | 02 | Independent Distributions | 🟡 Intermediate | tfd.Independent, batch dimensions | [![Open Notebook](https://img.shields.io/badge/Open-Notebook-blue)](01_The%20TensorFlow_Probability_library/02_Independent_Distributions.ipynb) |
-| 03 | Sampling & Log Probabilities | 🟡 Intermediate | sample(), log_prob(), Monte Carlo | [![Open Notebook](https://img.shields.io/badge/Open-Notebook-blue)](01_The%20TensorFlow_Probability_library/03_Sampling%20and%20Log%20Probabilities.ipynb) |
+| 03 | Sampling & Log Probabilities | 🟡 Intermediate | `sample()`, `log_prob()`, Monte Carlo | [![Open Notebook](https://img.shields.io/badge/Open-Notebook-blue)](01_The%20TensorFlow_Probability_library/03_Sampling%20and%20Log%20Probabilities.ipynb) |
 | 04 | Trainable Distributions | 🟡 Intermediate | tf.Variable parameters, gradient flow | [![Open Notebook](https://img.shields.io/badge/Open-Notebook-blue)](01_The%20TensorFlow_Probability_library/04_Trainable_Distributions.ipynb) |
 | 05 | TFP Distributions Summary | 🟢 Reference | Distribution catalog, API reference | [![Open Notebook](https://img.shields.io/badge/Open-Notebook-blue)](01_The%20TensorFlow_Probability_library/05_tfp_Distributions_Summary_.ipynb) |
 | 06 | Independent Naive Classifier | 🟡 Intermediate | Feature independence, text classification | [![Open Notebook](https://img.shields.io/badge/Open-Notebook-blue)](01_The%20TensorFlow_Probability_library/06_Independent_dist_Naive_Clasif.ipynb) |
@@ -302,7 +302,7 @@ $$
 | CIFAR-10 Classification | 50k samples | 15 min | 45 min | 60 min | 90 min |
 | CelebA Generation | 200k samples | N/A | N/A | 120 min | 180 min |
 
->*Benchmarks on NVIDIA RTX 3080 GPU*
+>*Benchmarks on NVIDIA RTX 3090 GPU*
 
 ### Memory Usage
 
