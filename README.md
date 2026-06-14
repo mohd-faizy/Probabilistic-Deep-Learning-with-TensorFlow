@@ -1,6 +1,12 @@
-# 🧠 **Probabilistic Deep Learning with TensorFlow**
+
 
 <div align="center">
+
+<h1>🧠Probabilistic Deep Learning with TensorFlow</h1>
+
+<img src='_img/head.png'>
+
+<br>
 
 [![Author](https://img.shields.io/badge/Author-mohd--faizy-red?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mohd-faizy)
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-2.15%2B-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)](https://tensorflow.org/)
@@ -20,7 +26,7 @@
 
 </div>
 
-<img src='_img/head.png'>
+
 
 This repository is a comprehensive collection of **TensorFlow Probability** implementations for probabilistic deep learning. The *primary* goal is **educational**: to bridge the gap between traditional deterministic models and real-world uncertainty quantification. 
 
