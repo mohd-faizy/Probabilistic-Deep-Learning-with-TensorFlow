@@ -1,3 +1,4 @@
+<h1>Probabilistic Deep Learning</h1>
 
 
 <div align="center">
@@ -6,10 +7,8 @@
   <img src="_img/head.png" alt="Probabilistic Deep Learning with TensorFlow Banner" width="900" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.15);">
 </a>
 
-
 ---
 
-<h1>🧠 Probabilistic Deep Learning with TensorFlow</h1>
 
 <p align="center">
   <strong>Unlock the power of uncertainty quantification, density estimation, and generative modeling with TensorFlow Probability.</strong>
@@ -198,75 +197,225 @@ model.compile(optimizer='adam', loss='sparse_categorical_crossentropy')
 
 ## 🎲 Core Probability Distributions
 
-Understanding these distributions is crucial for effective probabilistic modeling:
+Understanding core probability distributions is fundamental for designing probabilistic models. In TensorFlow Probability, distributions are treated as first-class computational objects. They are grouped here by their mathematical type: **Discrete**, **Continuous**, and **Multivariate**.
+
+### 📋 Distributions Quick Reference
+
+| Distribution | Type | Support | Parameters | TFP Class |
+| :--- | :--- | :--- | :--- | :--- |
+| **Bernoulli** | 🟢 Discrete | $\{0, 1\}$ | $p \in [0, 1]$ or $\text{logits} \in \mathbb{R}$ | [`tfd.Bernoulli`](https://www.tensorflow.org/probability/api_docs/python/tfp/distributions/Bernoulli) |
+| **Binomial** | 🟢 Discrete | $\{0, 1, \dots, n\}$ | $n \in \mathbb{N}^+$, $p \in [0, 1]$ | [`tfd.Binomial`](https://www.tensorflow.org/probability/api_docs/python/tfp/distributions/Binomial) |
+| **Poisson** | 🟢 Discrete | $\{0, 1, 2, \dots\}$ | $\lambda > 0$ (rate) | [`tfd.Poisson`](https://www.tensorflow.org/probability/api_docs/python/tfp/distributions/Poisson) |
+| **Gaussian (Normal)** | 🔵 Continuous | $\mathbb{R}$ | $\mu \in \mathbb{R}$, $\sigma > 0$ | [`tfd.Normal`](https://www.tensorflow.org/probability/api_docs/python/tfp/distributions/Normal) |
+| **Exponential** | 🔵 Continuous | $[0, \infty)$ | $\lambda > 0$ (rate) | [`tfd.Exponential`](https://www.tensorflow.org/probability/api_docs/python/tfp/distributions/Exponential) |
+| **Beta** | 🔵 Continuous | $(0, 1)$ | $\alpha, \beta > 0$ (concentration) | [`tfd.Beta`](https://www.tensorflow.org/probability/api_docs/python/tfp/distributions/Beta) |
+| **Multivariate Gaussian** | 🌐 Multivariate | $\mathbb{R}^k$ | $\boldsymbol{\mu} \in \mathbb{R}^k$, covariance $\boldsymbol{\Sigma} \in \mathbb{R}^{k \times k}$ | [`tfd.MultivariateNormalTriL`](https://www.tensorflow.org/probability/api_docs/python/tfp/distributions/MultivariateNormalTriL) |
 
 ---
 
 ### 📊 Discrete Distributions
 
-#### **Binomial Distribution**  
+Discrete distributions model count data, binary trials, or categorical events where outcomes are distinct, countable values.
 
-Models the number of successes in \(n\) independent trials with probability \(p\).
+#### 🟢 Bernoulli Distribution (`tfd.Bernoulli`)
 
-$$
-P(X = k) = \binom{n}{k} p^k (1-p)^{n-k}
-$$
+<img src="_img/bernoulli.png" width="280" align="right" alt="Bernoulli Distribution">
 
-**Use Cases**: A/B testing, quality control, medical trials  
+**Mathematical Formulation:**
+$$P(X = x) = p^x (1-p)^{1-x}, \quad x \in \{0, 1\}$$
+
+*   **Support:** $x \in \{0, 1\}$
+*   **Parameters:** Probability of success $p \in [0, 1]$ (or log-odds $\text{logits} \in \mathbb{R}$)
+*   **Typical DL Use Cases:** Binary classification outputs, Variational Autoencoder (VAE) decoder output for binary data (e.g. MNIST pixels), and stochastic dropout masks.
+
+**TFP Implementation:**
+```python
+import tensorflow_probability as tfp
+tfd = tfp.distributions
+
+# Define via probability of success
+bernoulli = tfd.Bernoulli(probs=0.7)
+
+# Define via logits (log-odds, preferred for neural networks)
+bernoulli_logits = tfd.Bernoulli(logits=0.85)
+```
+
+<br clear="right"/>
+<br/>
 
 ---
 
-#### **Poisson Distribution**  
+#### 🟢 Binomial Distribution (`tfd.Binomial`)
 
-Models the number of events occurring in a fixed interval.
+<img src="_img/binomial.png" width="280" align="right" alt="Binomial Distribution">
 
-$$
-P(X = k) = \frac{\lambda^k e^{-\lambda}}{k!}
-$$
+**Mathematical Formulation:**
+$$P(X = k) = \binom{n}{k} p^k (1-p)^{n-k}, \quad k \in \{0, 1, \dots, n\}$$
 
-**Use Cases**: Customer arrivals, system failures, web traffic  
+*   **Support:** $k \in \{0, 1, \dots, n\}$
+*   **Parameters:** Number of trials $n \in \mathbb{N}^+$, success probability $p \in [0, 1]$
+*   **Typical DL Use Cases:** A/B testing models, click-through-rate (CTR) modeling, quality control and defect counts.
+
+**TFP Implementation:**
+```python
+import tensorflow_probability as tfp
+tfd = tfp.distributions
+
+# 15 independent trials with success probability 0.4
+binomial = tfd.Binomial(total_count=15., probs=0.4)
+```
+
+<br clear="right"/>
+<br/>
+
+---
+
+#### 🟢 Poisson Distribution (`tfd.Poisson`)
+
+<img src="_img/poisson.png" width="280" align="right" alt="Poisson Distribution">
+
+**Mathematical Formulation:**
+$$P(X = k) = \frac{\lambda^k e^{-\lambda}}{k!}, \quad k \in \{0, 1, 2, \dots\}$$
+
+*   **Support:** $k \in \{0, 1, 2, \dots\}$
+*   **Parameters:** Average event rate $\lambda > 0$
+*   **Typical DL Use Cases:** Count regression models (Poisson regression), web traffic/API request volume forecasting, and anomaly detection in system logs.
+
+**TFP Implementation:**
+```python
+import tensorflow_probability as tfp
+tfd = tfp.distributions
+
+# Average rate of 5.0 events per interval
+poisson = tfd.Poisson(rate=5.0)
+```
+
+<br clear="right"/>
+<br/>
 
 ---
 
 ### 📈 Continuous Distributions
 
-#### **Gaussian (Normal) Distribution**  
+Continuous distributions model real-valued parameters, waiting times, or data points that can take any value within a range.
 
-The cornerstone of probabilistic modeling with symmetric, bell-shaped curves.
+#### 🔵 Gaussian (Normal) Distribution (`tfd.Normal`)
 
-$$
-f(x) = \frac{1}{\sigma\sqrt{2\pi}} \exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)
-$$
+<img src="_img/gaussian.png" width="280" align="right" alt="Gaussian Distribution">
 
-**Use Cases**: Neural network weights, measurement errors, natural phenomena  
+**Mathematical Formulation:**
+$$f(x) = \frac{1}{\sigma\sqrt{2\pi}} \exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right), \quad x \in \mathbb{R}$$
+
+*   **Support:** $x \in \mathbb{R}$
+*   **Parameters:** Mean $\mu \in \mathbb{R}$, standard deviation $\sigma > 0$
+*   **Typical DL Use Cases:** Weight priors/posteriors in Bayesian Neural Networks (BNNs), VAE continuous latent spaces (reparameterization trick), and continuous regression with uncertainty output.
+
+**TFP Implementation:**
+```python
+import tensorflow_probability as tfp
+tfd = tfp.distributions
+
+# Standard Normal (mean 0, std dev 1)
+normal = tfd.Normal(loc=0.0, scale=1.0)
+```
+
+<br clear="right"/>
+<br/>
 
 ---
 
-#### **Exponential Distribution**  
+#### 🔵 Exponential Distribution (`tfd.Exponential`)
 
-Models waiting times and survival analysis.
+<img src="_img/exponential.png" width="280" align="right" alt="Exponential Distribution">
 
-$$
-f(x) = \lambda e^{-\lambda x}, \quad x \geq 0
-$$
+**Mathematical Formulation:**
+$$f(x) = \lambda e^{-\lambda x}, \quad x \geq 0$$
 
-**Use Cases**: System reliability, queueing theory, survival analysis  
+*   **Support:** $x \in [0, \infty)$
+*   **Parameters:** Decay/arrival rate $\lambda > 0$
+*   **Typical DL Use Cases:** Survival analysis and time-to-event estimation, wait-time and queueing theory in networks, positive-valued prior assumptions.
+
+**TFP Implementation:**
+```python
+import tensorflow_probability as tfp
+tfd = tfp.distributions
+
+# Exponential decay rate of 1.0
+exponential = tfd.Exponential(rate=1.0)
+```
+
+<br clear="right"/>
+<br/>
+
+---
+
+#### 🔵 Beta Distribution (`tfd.Beta`)
+
+<img src="_img/beta.png" width="280" align="right" alt="Beta Distribution">
+
+**Mathematical Formulation:**
+$$f(x) = \frac{x^{\alpha-1}(1-x)^{\beta-1}}{\mathrm{B}(\alpha, \beta)}, \quad x \in (0, 1)$$
+
+*   **Support:** $x \in (0, 1)$
+*   **Parameters:** Shape/concentration parameters $\alpha, \beta > 0$
+*   **Typical DL Use Cases:** Prior distribution for Binomial/Bernoulli probabilities, modeling bounded target proportions, and Bayesian inference of rates / success probabilities.
+
+**TFP Implementation:**
+```python
+import tensorflow_probability as tfp
+tfd = tfp.distributions
+
+# Beta prior distribution
+beta = tfd.Beta(concentration1=2.0, concentration0=5.0)
+```
+
+<br clear="right"/>
+<br/>
 
 ---
 
 ### 🌐 Multivariate Distributions
 
-#### **Multivariate Gaussian**  
+Multivariate distributions model higher-dimensional vectors of random variables, accounting for the correlations between different dimensions.
 
-Essential for modeling correlated variables with full covariance structure.
+#### 🌐 Multivariate Gaussian Distribution (`tfd.MultivariateNormalTriL`)
 
-$$
-f(\mathbf{x}) = \frac{1}{\sqrt{(2\pi)^k|\boldsymbol{\Sigma}|}}
-\exp\left(-\frac{1}{2}(\mathbf{x}-\boldsymbol{\mu})^T\boldsymbol{\Sigma}^{-1}(\mathbf{x}-\boldsymbol{\mu})\right)
-$$
+<img src="_img/multivariate_gaussian.png" width="280" align="right" alt="Multivariate Gaussian Distribution">
 
-**Use Cases**: Dimensionality reduction, portfolio optimization, computer vision  
+**Mathematical Formulation:**
+$$f(\mathbf{x}) = \frac{e^{-\frac{1}{2}(\mathbf{x}-\boldsymbol{\mu})^T\boldsymbol{\Sigma}^{-1}(\mathbf{x}-\boldsymbol{\mu})}}{\sqrt{(2\pi)^k\vert\boldsymbol{\Sigma}\vert}}, \quad \mathbf{x} \in \mathbb{R}^k$$
 
+*   **Support:** $\mathbf{x} \in \mathbb{R}^k$
+*   **Parameters:** Mean vector $\boldsymbol{\mu} \in \mathbb{R}^k$, covariance matrix $\boldsymbol{\Sigma} \in \mathbb{R}^{k \times k}$ (positive-definite)
+*   **Typical DL Use Cases:** Modeling correlated multidimensional features, generative modeling (Normalizing Flows and VAE priors), and Kalman filter state estimators.
+
+**TFP Implementation:**
+```python
+import tensorflow_probability as tfp
+tfd = tfp.distributions
+
+# Correlated bivariate normal via lower triangular Cholesky factor
+mv_normal = tfd.MultivariateNormalTriL(
+    loc=[0.0, 0.0],
+    scale_tril=[[1.0, 0.0], 
+                [0.6, 0.8]]
+)
+```
+
+<br clear="right"/>
+<br/>
+
+---
+
+### 💡 Core Distribution Methods in TFP
+
+Every distribution object in TensorFlow Probability exposes a consistent API for seamless integration with TensorFlow graph execution:
+
+*   **`sample(sample_shape)`**: Draws Monte Carlo samples from the distribution.
+*   **`log_prob(value)`**: Computes the log probability density (or mass) function. Crucial for calculating custom loss functions (e.g. Negative Log-Likelihood).
+*   **`prob(value)`**: Computes the exact probability density/mass $P(X=x)$.
+*   **`mean()` / `variance()` / `stddev()`**: Analytical moments of the distribution.
+*   **`kl_divergence(other_dist)`**: Analytical Kullback-Leibler divergence between two distributions of the same type.
 
 ---
 
