@@ -25,8 +25,8 @@
 <p align="center">
   <a href="https://github.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow/stargazers"><img src="https://img.shields.io/github/stars/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow?style=for-the-badge&logo=github&logoColor=white&color=ffd700" alt="Stars"></a>
   <a href="https://github.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow/issues"><img src="https://img.shields.io/github/issues/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow?style=for-the-badge&logo=github&logoColor=white&color=ef4444" alt="GitHub Issues"></a>
-  <a href="https://github.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow/commits/main"><img src="https://img.shields.io/github/last-commit/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow?style=for-the-badge&logo=git&logoColor=white&color=8b5cf6" alt="Last Commit"></a>
-  <a href="https://github.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow"><img src="https://img.shields.io/github/repo-size/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow?style=for-the-badge&logo=github&logoColor=white&color=6b7280" alt="Repo Size"></a>
+  <a href="https://github.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow/commits/main"><img src="https://img.shields.io/badge/dynamic/xml?color=8b5cf6&amp;label=last%20commit&amp;query=string((%2F%2F*%5Blocal-name()%3D'text'%5D)%5Blast()%5D)&amp;url=https%3A%2F%2Fbadgen.net%2Fgithub%2Flast-commit%2Fmohd-faizy%2FProbabilistic-Deep-Learning-with-TensorFlow&amp;style=for-the-badge&amp;logo=git&amp;logoColor=white" alt="Last Commit"></a>
+  <a href="https://github.com/mohd-faizy/Probabilistic-Deep-Learning-with-TensorFlow"><img src="https://img.shields.io/badge/repo_size-88_MB-6b7280?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="Repo Size"></a>
 </p>
 
 <!-- Meta & Community -->
